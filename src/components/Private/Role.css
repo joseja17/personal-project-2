@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+.App {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 110px;
+    color: #525566;
+    padding-bottom: 48px;
+    font-weight: 400;
+    width: 315px;
+}
+
+.pictures {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 5px;
+}
+
+.img {
+    height:175px;
+    width: 138px;
+    padding-right: 60px;
+}
+
+.img1 {
+    height:175px;
+    width: 138px;
+    padding-left: 60px;
+}
+
+.role {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 20px;
+}
+
+.h2 {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #525566;
+    padding-right: 95px;
+    font-weight: 400;
+}
+
+.h21 {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #525566;
+    padding-right: 1px;
+    font-weight: 400;
+}
+
+.buttons {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.button {
+    margin-right: 44px;
+    width: 168px;
+    height: 48px;
+    color: rgba(255, 255, 255, 0.952);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 45px;
+    background-color: #2962FF;
+    box-shadow: 0 1px 10px 0 rgba(253,134,142,0.3), 0 6px 14px 0 #C7CBDC;
+}
+
+.button1 {
+    margin-left: 50px;
+    width: 168px;
+    height: 48px;
+    color: rgba(255, 255, 255, 0.952);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 45px;
+    background-color: #2962FF;
+    box-shadow: 0 1px 10px 0 rgba(253,134,142,0.3), 0 6px 14px 0 #C7CBDC;
+}
+
+.button1:hover {
+    background-color: #0D43CD;
+}
+
+.button:hover {
+    background-color: #0D43CD;
+}
+

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+.Nav {
+height: 100vh;
+width: 169px;
+border: 2px solid #F2F4FC;
+background-color: rgba(248, 244, 244, 0);
+box-shadow: 1px 0 4px 0 #DDE0EE;
+position: fixed;
+left: 0;
+z-index: 5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #FFFFFF;
+    height: 100vh;
+    overflow: auto;
+}
+
+li {
+    margin-bottom: 59px;
+    font-family: 'Roboto', sans-serif;
+    color: #525566;
+    font-size: 14px;
+    line-height: 16px;
+    height: 16px;
+    font-weight: 500;
+}
+
+.RallyAroundUs {
+    margin-bottom: 88px;
+    color: #0D43CD;
+}
+
+.icons {
+    padding-right: 22px;
+    height: 19px;
+    width: 19px;
+}
+
+.aaa:hover {
+    cursor: pointer;
+}
+
+.roster-icons {
+    padding-right: 22px;
+    margin-bottom: -5px;
+    height: 26px;
+    width: 26px;
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+
+.create-team-page {
+    background-color: white;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.create-team-box {
+	height: 477px;
+	width: 386px;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+    box-shadow: 0 10px 30px 0 #C7CBDC;
+    margin: auto;
+    margin-top: 125px;
+    padding: 15px 60px 40px 60px;
+
+}
+
+.create-team-h4 {
+	height: 15px;
+	width: 77px;
+	color: #4A4A4A;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 14px;
+	font-weight: 500;
+    line-height: 15px;
+    margin-bottom: 6px;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.creat-input {
+    border: none;
+    box-shadow: none;
+	height: 36px;
+	width: 385px;
+	border-radius: 30px;
+    background-color: #F2F4FC;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 15px;
+    font-style: italic;
+    padding: 0;
+    color: #9B9B9B;
+} 
+
+.creat-input::placeholder {
+    color: #9B9B9B;
+    font-size: 12px;
+}
+
+.create-team-cancel-button {
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+	height: 38.4px;
+	width: 144px !important;
+	border-radius: 38.4px;
+	background-color: #75798C;
+	box-shadow: 0 2px 9px 0 #75798C;
+}
+
+.create-team-submit-button {
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+	height: 38.4px;
+	width: 144px;
+	border-radius: 38.4px;
+	background-color: #2E6FEF;
+	box-shadow: 0 2px 9px 0 #75798C;
+}
+
+.create-your-team {
+	color: #525566;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 17px;
+    font-weight: 500;
+    padding: 0;
+    font-weight: 400;
+}

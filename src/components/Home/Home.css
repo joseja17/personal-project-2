@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+.Home {
+  background: #FFFFFF;
+}
+
+.home-header {
+    margin-bottom: 75px;
+}
+
+.center-circle {
+    height: 545px;
+    width: 545px;
+    background-color: #F2F4FC;
+    border-radius: 50%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.no-team-text {
+    color: #525566;
+    width: 228px;
+    height: 52px;
+    text-align: center;
+    font-size: 22.5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.player-icon {
+    width: 145px;
+    height: 185;
+    margin-top: 47px;
+    margin-bottom: 58px;
+}
+
+.add-team-button {
+    height: 47.7px;
+    width: 179.1px;
+    border-radius: 36px;
+    background-color: rgb(18, 77, 241);
+    box-shadow: 0 2px 8px 0 #75798C;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none;
+}
+
+.add-team-button:hover {
+    background-color: #0D43CD;
+  }
+
+.aaa {
+    text-decoration: none;
+}
+
+.team-container {
+    font-family: 'Roboto', sans-serif;
+    height: 41px;
+    width: 830px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+    font-size: 11px;
+    color: #656D78;
+    margin: 6px;
+    margin-left: 75px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.team-container-name {
+    width: 175px;
+    height: 20px;
+}
+
+.team-container-sport {
+    width: 175px;
+    height: 20px;
+}
+
+.team-container-time-zone {
+    width: 175px;
+    height: 20px;
+}
+
+.team-container-country {
+    width: 175px;
+    height: 20px;
+}
+
+.team-container-zip-code {
+    width: 175px;
+    height: 20px;
+}
+
+.team-container-logo {
+    width: 175px;
+    height: 20px;
+}
+
+.team-container-button-edit {
+    width: 59px;
+    height: 25px;
+    background-color: #525566;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.team-container-button-delete {
+    width: 59px;
+    height: 25px;
+    background-color: #FF4553;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.team-container-title {
+    font-family: 'Roboto', sans-serif;
+    height: 41px;
+    width: 830px;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+    font-size: 13px;
+    color: #656D78;
+    margin: 6px;
+    margin-left: 75px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.team-container-name-title {
+    width: 175px;
+    height: 20px;
+    margin: -29.5px;
+}
+
+.team-container-button-edit-title {
+    width: 59px;
+    height: 25px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.team-container-button-delete-title {
+    width: 59px;
+    height: 25px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.teams-title-h1 {
+    margin-top: 50px;
+    padding-bottom: 200px;
+    margin-left: -100px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(103, 106, 122);
+    font-size: 30px;
+}
+
+.team-container-button-new {
+	height: 30px;
+	width: 108px;
+	border-radius: 5px;
+    background-color: #525566;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+.team-container-button-new:hover {
+    background-color: #C7CBDC;
+}
+
+.team-container-button-new-1 {
+    height: 35px;
+    width: 108px;
+    border: none;
+    background: none;
+    padding-right: 67px;
+    padding-left: 66px;
+}

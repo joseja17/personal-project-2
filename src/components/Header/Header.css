@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+.nav-body {
+    padding-top: 20px;
+    position: relative;
+    height: 61px;
+    width: 100vw;
+    box-shadow: 0 1px 10px 0 rgba(143, 166, 236, 0.199), 0 6px 14px 0 rgb(221, 221, 221);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.div1 {
+    margin-top: -20px;
+}
+
+.div {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.span {
+    margin-right: 60px;
+    margin-top: 20px;
+}
+.avatar {
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+}
+
+.rallylogo {
+    height: 37px;	
+    width: 83px;
+    margin-right: -115px;
+    padding-top: 20px;
+  }
+
+  .dropdown {
+      padding: 14px;
+      right: 15px;
+      position: absolute;
+      width: 142px;
+      height: 145px;
+      background: #525566;
+      padding-right: 15px;
+      color: rgba(255, 255, 255, 0.952);
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 2px;
+      justify-content: space-around;
+      cursor: pointer;
+      font-weight: 300;
+  }
+
+  .hr {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-color: #C7CBDC;
+    border-radius: 25%;
+    width: 140px;
+  }
+
+  .dropdowns {
+      margin-right: 30px;
+      display: flex;
+      flex-wrap: nowrap;
+  }
+
+  .h2-teams {
+    font-size: 16px !important;
+    font-weight: 10000 !important;	
+    color: #0D43CD;	
+    font-family: 'Roboto', sans-serif;		
+    text-align: center;
+    cursor: default;
+    font-weight: 500;
+  }
+
+  .dropdown1 {
+    padding: 14px 14px 0px 14px;
+    right: 15px;
+    position: absolute;
+    width: 142px;
+    height: 115px;
+    background: #525566;
+    padding-right: 15px;
+    color: rgba(255, 255, 255, 0.952);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.hr1 {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-color: #C7CBDC;
+    border-radius: 25%;
+    width: 140px;
+  }
+
+  .logout {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.952);
+  }
+
+  .create-team {
+      height: 50px;
+      width: 170px;
+      background: #0D43CD;
+      color: white;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      border: none;
+      margin: 0px -14px 0px -14px;
+  }
+
+  .manage-teams {
+      color: #FFFFFF;
+  }
