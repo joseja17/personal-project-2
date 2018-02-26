@@ -13,6 +13,7 @@ class HomeSchedule extends Component {
             resp: [""],
             firstLoad: true
         }
+        this.deleteEvent = this.deleteEvent.bind(this);
     }
 
     componentDidMount() {
@@ -26,6 +27,16 @@ class HomeSchedule extends Component {
         })
     }
 
+    deleteEvent(id){
+        axios.delete('/api/schedule/' + id).then(resp =>{
+            console.log(resp)
+            console.log(resp.data)
+            this.setState({
+                resp : resp.data
+            })
+        })
+    }
+
     render() {
         var scheduleToDisplay = this.state.resp.map( (val, i) => {
             return (
@@ -35,7 +46,7 @@ class HomeSchedule extends Component {
                     <div className='schedule-container-time-zone'>{val.event_time}</div>
                     <div className='schedule-container-country'>{val.event_location}</div>
                     <button className='schedule-container-button-edit'>Edit</button>
-                    <button className='schedule-container-button-delete'>Delete</button>
+                    <button className='schedule-container-button-delete' onClick={ () => this.deleteEvent(val.schedule_id)}>Delete</button>
                 </div>
             )
         })
@@ -57,7 +68,7 @@ class HomeSchedule extends Component {
                 <div className='schedule-container-title'><h1 className='schedules-title-h1'>Schedule</h1></div>
 
                 <div className='schedule-container' >
-                    <button className='schedule-container-button-new'>+ New</button>
+                <a href='/#/schedule'><button className='schedule-container-button-new'>+ New</button></a>
                     <button className='schedule-container-button-new-1'></button>
                     <button className='schedule-container-button-new-1'></button>
                     <button className='schedule-container-button-new'>Import</button>

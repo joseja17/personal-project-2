@@ -13,6 +13,8 @@ class HomeRoster extends Component {
             resp: [""],
             firstLoad: true
         }
+
+        this.deletePlayer = this.deletePlayer.bind(this);
     }
 
     componentDidMount() {
@@ -21,7 +23,16 @@ class HomeRoster extends Component {
             this.setState({
                 resp: resp.data,
                 firstLoad: false
+            })
+        })
+    }
 
+    deletePlayer(id){
+        axios.delete('/api/roster/' + id).then(resp =>{
+            console.log(resp)
+            console.log(resp.data)
+            this.setState({
+                resp : resp.data
             })
         })
     }
@@ -38,7 +49,7 @@ class HomeRoster extends Component {
                     <div className='roster-container-country'>{val.email}</div>
                     <div className='roster-container-country'>{val.date_of_birth}</div>
                     <button className='roster-container-button-edit'>Edit</button>
-                    <button className='roster-container-button-delete'>Delete</button>
+                    <button className='roster-container-button-delete' onClick={ () => this.deletePlayer(val.player_id)}>Delete</button>
                 </div>
             )
         })
@@ -62,7 +73,7 @@ class HomeRoster extends Component {
                     <div className='roster-container-title'><h1 className='rosters-title-h1'>Roster</h1></div>
 
                 <div className='roster-container' >
-                    <button className='roster-container-button-new'>+ New</button>
+                <a href='/#/roster'><button className='roster-container-button-new'>+ New</button></a>
                     <button className='roster-container-button-new-1'></button>
                     <button className='roster-container-button-new-1'></button>
                     <button className='roster-container-button-new'>Import</button>

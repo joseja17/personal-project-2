@@ -102,6 +102,17 @@ app.get('/api/teams', (req, res) => {
 })
 
 
+// app.delete('/api/teams/:id', (req, res)=>{
+//     console.log(req.params.id)
+//     const db = req.app.get('db');
+//     db.delete_team([req.params.id]).then(resp=>{
+//         console.log(resp)
+//         res.status(200).send(resp)
+//     })
+//     .catch(err => console.log(err))
+// })
+
+
 app.post('/api/teams', (req, res) => {
     console.log(req.user)
     const db = req.app.get('db');
@@ -123,12 +134,22 @@ app.get('/api/schedule:id', (req, res) => {
 })
 
 
+app.delete('/api/schedule/:id', (req, res)=>{
+    console.log(req.params.id)
+    const db = req.app.get('db');
+    db.delete_event([req.params.id]).then(resp=>{
+        console.log(resp)
+        res.status(200).send(resp)
+    })
+    .catch(err => console.log(err))
+})
+
+
 app.post('/api/schedule', (req, res) => {
     console.log(req.body)
-    console.log(req.user)
     const db = req.app.get('db');
-    const {event_name, event_date, event_time, event_location} = req.body;
-    db.create_event([event_name, event_date, event_time, event_location, req.user.teams_id]).then(resp => {
+    const {event_name, event_date, event_time, event_location, teams_id} = req.body;
+    db.create_event([event_name, event_date, event_time, event_location, teams_id]).then(resp => {
         res.status(200).send(resp);
     })
 })
@@ -142,6 +163,17 @@ app.get('/api/roster/:id', (req, res) => {
         console.log(resp);
         res.status(200).send(resp);
     })
+})
+
+
+app.delete('/api/roster/:id', (req, res)=>{
+    console.log(req.params.id)
+    const db = req.app.get('db');
+    db.delete_player([req.params.id]).then(resp=>{
+        console.log(resp)
+        res.status(200).send(resp)
+    })
+    .catch(err => console.log(err))
 })
 
 

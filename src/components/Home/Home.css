@@ -104,21 +104,29 @@
 }
 
 .team-container-button-edit {
-    width: 59px;
-    height: 25px;
+    width: 62px;
+    height: 29px;
     background-color: #525566;
     border-radius: 4px;
     color: #FFFFFF;
     border: none;
 }
 
+.team-container-button-edit:hover {
+    background-color: #C7CBDC;
+}
+
 .team-container-button-delete {
     width: 59px;
-    height: 25px;
+    height: 28px;
     background-color: #FF4553;
     border-radius: 4px;
     color: #FFFFFF;
     border: none;
+}
+
+.team-container-button-delete:hover {
+    background-color: rgba(255, 69, 85, 0.47);
 }
 
 .team-container-title {

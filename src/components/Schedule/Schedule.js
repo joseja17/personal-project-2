@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Schedule.css';
 import Nav from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Nav/Nav.js';
 import Header from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Header/Header.js';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -45,8 +46,13 @@ class Schedule extends Component {
 
     handleOnClick(e) {
         e.preventDefault();
-        axios.post('/api/schedule', { event_name: this.state.event_name, event_date: this.state.event_date, event_time: this.state.event_time, event_location: this.state.event_location }).then(resp => {
+        axios.post('/api/schedule', { event_name: this.state.event_name, event_date: this.state.event_date, event_time: this.state.event_time, event_location: this.state.event_location, teams_id: this.state.teams_id }).then(resp => {
             console.log(resp);
+            toast.success('Event Added!');
+        })
+        .catch((err) => {
+            console.log(err);
+            toast.error('Failed to add Event');
         })
     }
 
@@ -59,7 +65,7 @@ class Schedule extends Component {
         })
         return (
             <div className='schedule-page'>
-
+                <ToastContainer />
                 <div>
                     <Nav />
                 </div>
@@ -73,7 +79,7 @@ class Schedule extends Component {
                     <div><h2 className='schedule-event' >Add Event</h2></div>
 
                     <h4 className='roster-h4'>Team</h4>
-                    <select onChange={e => this.handleOnSelect(e)} placeholder=' Select Team'>{teamNameToDisplay}</select>
+                    <select onChange={e => this.handleOnSelect(e)} className='schedule-input'>{teamNameToDisplay}</select>
                     <h4 className='schedule-h4'>Event</h4>
                     <input className='schedule-input' onChange={e => this.handleOnChange(e)} placeholder='  This can be changged anytime' name='event_name' type='text' />
                     <h4 className='schedule-h4'>Date</h4>

@@ -68,7 +68,7 @@ let {userData} = this.props;
                 </div>
 
                 <div className='buttons'>
-                    <a href='/#/home'><button className='button'>Create Team</button></a>
+                    <a href='/#/home'><button className='button'>Your Teams</button></a>
                     <button className='button1'>Find Team</button>
                 </div>
 

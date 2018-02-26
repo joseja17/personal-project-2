@@ -3,6 +3,7 @@ import axios from 'axios';
 import './CreateTeam.css';
 import Nav from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Nav/Nav.js';
 import Header from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Header/Header.js';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -32,6 +33,11 @@ class CreateTeam extends Component {
         e.preventDefault();
         axios.post('/api/teams', { team_name: this.state.team_name, sport: this.state.sport, time_zone: this.state.time_zone, country: this.state.country, zip_code: this.state.zip_code, logo: this.state.logo }).then(resp => {
             console.log(resp);
+            toast.success('Team Added!');
+        })
+        .catch((err) => {
+            console.log(err);
+            toast.error('Failed to add Team');
         })
     }
 
@@ -39,7 +45,7 @@ class CreateTeam extends Component {
     render() {
         return (
             <div className='create-team-page'>
-
+                <ToastContainer />
                 <div>
                     <Nav />
                 </div>

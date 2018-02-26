@@ -14,6 +14,7 @@ class Home extends Component {
             resp: [""],
             firstLoad: true
         }
+        // this.deleteTeam = this.deleteTeam.bind(this);
     }
 
     componentDidMount() {
@@ -27,6 +28,16 @@ class Home extends Component {
         })
     }
 
+    // deleteTeam(id){
+    //     axios.delete('/api/teams/' + id).then(resp =>{
+    //         console.log(resp)
+    //         console.log(resp.data)
+    //         this.setState({
+    //             resp : resp.data
+    //         })
+    //     })
+    // }
+
     render() {
         var teamsToDisplay = this.state.resp.map( (val, i) => {
             return (
@@ -37,10 +48,10 @@ class Home extends Component {
                     <div className='team-container-country'>{val.country}</div>
                     <div className='team-container-zip-code'>{val.zip_code}</div>
                     <div className='team-container-logo'>{val.logo}</div>
-                    <Link to={'/homeroster/'+val.teams_id}><button>Edit Roster</button></Link >
-                    <Link to={'/homeschedule/'+val.teams_id}><button>Edit Schedule</button></Link >
-                    <button className='team-container-button-edit'>Edit</button>
-                    <button className='team-container-button-delete'>Delete</button>
+                    <Link to={'/homeroster/'+val.teams_id}><button className='team-container-button-edit'>Roster</button></Link >
+                    <Link to={'/homeschedule/'+val.teams_id}><button className='team-container-button-edit'>Schedule</button></Link >
+                    <button className='team-container-button-edit'>Edit Team</button>
+                    <button className='team-container-button-delete' /*onClick={ () => this.deleteTeam(val.teams_id)}*/>Delete</button>
                 </div>
             )
         })
@@ -56,10 +67,14 @@ class Home extends Component {
                     <Header />
                 </div>
 
-                <div className='team-container-title'><h1 className='teams-title-h1'>Teams</h1></div>
+                
+
+                { this.state.resp.length ? 
+                    <div>
+                    <div className='team-container-title'><h1 className='teams-title-h1'>Teams</h1></div>
 
                 <div className='team-container' >
-                    <button className='team-container-button-new'>+ New</button>
+                <a href='/#/createteam'><button className='team-container-button-new'>+ New</button></a>
                     <button className='team-container-button-new-1'></button>
                     <button className='team-container-button-new-1'></button>
                     <button className='team-container-button-new'>Import</button>
@@ -78,8 +93,8 @@ class Home extends Component {
                     <div className='team-container-button-edit-title'> </div>
                     <div className='team-container-button-delete-title'> </div>
                 </div>
-
-                { this.state.resp.length ? teamsToDisplay : <div className='center-circle'>
+                    
+                    {teamsToDisplay} </div> : <div className='center-circle'>
                     <div className='no-team-text'>Looks like you haven't created a team yet :(</div>
                     <div className='player-icon'><img src='/player.svg' alt='player-icon'/></div>
                     <div ><a href='/#/createteam'><button  className='add-team-button'>+ Add a team</button></a></div>
