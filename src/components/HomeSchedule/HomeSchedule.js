@@ -3,6 +3,7 @@ import './HomeSchedule.css';
 import Nav from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Nav/Nav.js';
 import Header from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Header/Header.js';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 
 class HomeSchedule extends Component {
@@ -27,14 +28,16 @@ class HomeSchedule extends Component {
         })
     }
 
-    deleteEvent(id){
-        axios.delete('/api/schedule/' + id).then(resp =>{
-            console.log(resp)
+    deleteEvent(id, teamsID){
+        var r = window.confirm('Are you sure you want to delete this event?');
+        if (r===true) {
+        axios.delete('/api/schedule/' + id + '/' + teamsID).then(resp =>{
             console.log(resp.data)
             this.setState({
                 resp : resp.data
             })
         })
+     }
     }
 
     render() {
@@ -45,8 +48,8 @@ class HomeSchedule extends Component {
                     <div className='schedule-container-sport'>{val.event_date}</div>
                     <div className='schedule-container-time-zone'>{val.event_time}</div>
                     <div className='schedule-container-country'>{val.event_location}</div>
-                    <button className='schedule-container-button-edit'>Edit</button>
-                    <button className='schedule-container-button-delete' onClick={ () => this.deleteEvent(val.schedule_id)}>Delete</button>
+                    <Link to={'/editevent/'+val.schedule_id}><button className='schedule-container-button-edit'>Edit</button></Link>
+                    <button className='schedule-container-button-delete' onClick={ () => this.deleteEvent(val.schedule_id, val.teams_id)}>Delete</button>
                 </div>
             )
         })

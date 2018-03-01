@@ -14,7 +14,7 @@ class Home extends Component {
             resp: [""],
             firstLoad: true
         }
-        // this.deleteTeam = this.deleteTeam.bind(this);
+        this.deleteTeam = this.deleteTeam.bind(this);
     }
 
     componentDidMount() {
@@ -28,15 +28,18 @@ class Home extends Component {
         })
     }
 
-    // deleteTeam(id){
-    //     axios.delete('/api/teams/' + id).then(resp =>{
-    //         console.log(resp)
-    //         console.log(resp.data)
-    //         this.setState({
-    //             resp : resp.data
-    //         })
-    //     })
-    // }
+    deleteTeam(id){
+        var r = window.confirm('Are you sure you want to delete this team?');
+        if (r === true) {
+            axios.delete('/api/teams/' + id).then(resp =>{
+                console.log(resp.data)
+                this.setState({
+                    resp : resp.data
+                })
+            })
+        }
+        
+    }
 
     render() {
         var teamsToDisplay = this.state.resp.map( (val, i) => {
@@ -50,8 +53,8 @@ class Home extends Component {
                     <div className='team-container-logo'>{val.logo}</div>
                     <Link to={'/homeroster/'+val.teams_id}><button className='team-container-button-edit'>Roster</button></Link >
                     <Link to={'/homeschedule/'+val.teams_id}><button className='team-container-button-edit'>Schedule</button></Link >
-                    <button className='team-container-button-edit'>Edit Team</button>
-                    <button className='team-container-button-delete' /*onClick={ () => this.deleteTeam(val.teams_id)}*/>Delete</button>
+                    <Link to={'/editteam/'+val.teams_id}><button className='team-container-button-edit'>Edit</button></Link >
+                    <button className='team-container-button-delete' onClick={ () => this.deleteTeam(val.teams_id)}>Delete</button>
                 </div>
             )
         })
@@ -89,7 +92,7 @@ class Home extends Component {
                     <div className='team-container-name-title'>Time Zone</div>
                     <div className='team-container-name-title'>Country</div>
                     <div className='team-container-name-title'>Zip Code</div>
-                    <div className='team-container-name-title'>Logo</div>
+                    <div className='team-container-name-title'></div>
                     <div className='team-container-button-edit-title'> </div>
                     <div className='team-container-button-delete-title'> </div>
                 </div>

@@ -55,80 +55,6 @@
     text-decoration: none;
 }
 
-.team-container {
-    font-family: 'Roboto', sans-serif;
-    height: 41px;
-    width: 830px;
-    background: #F5F7FA;
-    border-radius: 4px;
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
-    align-items: center;
-    font-size: 11px;
-    color: #656D78;
-    margin: 6px;
-    margin-left: 75px;
-    padding-left: 15px;
-    padding-right: 5px;
-}
-
-.team-container-name {
-    width: 175px;
-    height: 20px;
-}
-
-.team-container-sport {
-    width: 175px;
-    height: 20px;
-}
-
-.team-container-time-zone {
-    width: 175px;
-    height: 20px;
-}
-
-.team-container-country {
-    width: 175px;
-    height: 20px;
-}
-
-.team-container-zip-code {
-    width: 175px;
-    height: 20px;
-}
-
-.team-container-logo {
-    width: 175px;
-    height: 20px;
-}
-
-.team-container-button-edit {
-    width: 62px;
-    height: 29px;
-    background-color: #525566;
-    border-radius: 4px;
-    color: #FFFFFF;
-    border: none;
-}
-
-.team-container-button-edit:hover {
-    background-color: #C7CBDC;
-}
-
-.team-container-button-delete {
-    width: 59px;
-    height: 28px;
-    background-color: #FF4553;
-    border-radius: 4px;
-    color: #FFFFFF;
-    border: none;
-}
-
-.team-container-button-delete:hover {
-    background-color: rgba(255, 69, 85, 0.47);
-}
-
 .team-container-title {
     font-family: 'Roboto', sans-serif;
     height: 41px;
@@ -146,10 +72,90 @@
     padding-right: 5px;
 }
 
+.team-container {
+    font-family: 'Roboto', sans-serif;
+    height: 45px;
+    width: 830px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+    font-size: 11px;
+    color: #656D78;
+    margin: 6px;
+    margin-left: 75px;
+    padding: 15px 10px 0px 10px;
+}
+
+.team-container-name {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.team-container-sport {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.team-container-time-zone {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.team-container-country {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.team-container-zip-code {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.team-container-logo {
+    width: 50px;
+    height: 30px;
+}
+
+.team-container-button-edit {
+    width: 62px;
+    height: 29px;
+    background-color: #525566;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border: none;
+    margin: 8px 8px 23px 8px;
+}
+
+.team-container-button-edit:hover {
+    background-color: #C7CBDC;
+}
+
+.team-container-button-delete {
+    width: 59px;
+    height: 28px;
+    background-color: #FF4553;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border: none;
+    margin: 8px 8px 23px 8px;
+}
+
+.team-container-button-delete:hover {
+    background-color: rgba(255, 69, 85, 0.47);
+}
+
+
 .team-container-name-title {
-    width: 175px;
+    width: 100px;
     height: 20px;
-    margin: -29.5px;
 }
 
 .team-container-button-edit-title {
@@ -187,6 +193,7 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: .5px;
+    margin-bottom: 25px;
 }
 
 .team-container-button-new:hover {

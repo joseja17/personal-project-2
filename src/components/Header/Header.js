@@ -61,7 +61,7 @@ class Header extends Component {
 
                 <div className='dropdowns'>
 
-                    <div className='whole-dropdown1'>
+                    {/* <div className='whole-dropdown1'>
                         <div className='teams'><h2 onMouseEnter={this.onClickTeam} className='h2-teams'>Teams</h2></div>
                         {
                             this.state.dropdownTeam ?
@@ -75,7 +75,7 @@ class Header extends Component {
                             </div>
                             : null
                         }
-                    </div>
+                    </div> */}
 
                     <div className='whole-dropdown'>
                         <span onMouseEnter={this.onClick} className="span">{userData.img ? <img className='avatar' src={userData.img} alt='avatar' /> : null} </span>

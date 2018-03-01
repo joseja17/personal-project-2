@@ -19,10 +19,13 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
     "react-simple-dropdown": "^3.2.0",
+    "react-stripe-checkout": "^2.6.3",
+    "react-stripe-elements": "^1.4.1",
     "react-toastify": "^3.3.4",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^5.0.0",
+    "stripe": "^5.5.0",
     "switch": "0.0.0"
   },
   "scripts": {

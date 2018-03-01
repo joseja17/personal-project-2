@@ -1,0 +1,12 @@
+update teams set team_name = $1
+where teams_id = $7;
+update teams set sport = $2
+where teams_id = $7;
+update teams set time_zone = $3
+where teams_id = $7;
+update teams set country = $4
+where teams_id = $7;
+update teams set zip_code = $5
+where teams_id = $7;
+update teams set logo = $6
+where teams_id = $7;

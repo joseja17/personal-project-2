@@ -5,8 +5,13 @@ const express = require('express'),
     session = require('express-session'),
     passport = require('passport'),
     Auth0Strategy = require('passport-auth0'),
-    massive = require('massive');
-    bodyparser = require('body-parser');
+    massive = require('massive'),
+    bodyparser = require('body-parser'),
+    stripe = require('stripe')(process.env.SECRET_KEY); // invoke library with secret key
+
+
+
+
 
 const {
     SERVER_PORT,
@@ -29,6 +34,48 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session());
+
+
+
+//STRIPE
+app.post('/api/payment', function (req, res, next) {
+    //convert amount to pennies
+    const amountArray = req.body.amount.toString().split('');
+    console.log('amt', req.body.amount.toString().split(''));
+  
+    // Joe's penny function below
+    const pennies = [];
+    for (var i = 0; i < amountArray.length; i++) {
+      if (amountArray[i] === ".") {
+        if (typeof amountArray[i + 1] === "string") pennies.push(amountArray[i + 1]);
+        else pennies.push("0");
+        if (typeof amountArray[i + 2] === "string") pennies.push(amountArray[i + 2]);
+        else pennies.push("0");
+        break;
+      }
+      else pennies.push(amountArray[i]);
+    }
+    const convertedAmt = parseInt(pennies.join(''));
+  
+    const charge = stripe.charges.create( // method built in to library
+      { 
+        amount: convertedAmt, // amount in cents, again
+        currency: 'usd',
+        source: req.body.token.id, // needs to be the token id
+        description: 'Test charge from react app' // any description you want
+      },
+      function (err, charge) {
+        if (err) return res.sendStatus(500); // error means charge failure
+        return res.sendStatus(200);
+        
+        // if (err && err.type === 'StripeCardError') {
+        //   // The card has been declined
+        // }
+      });
+  });
+//
+
+
 
 massive(CONNECTION_STRING).then( db => {
     app.set('db', db);
@@ -101,16 +148,37 @@ app.get('/api/teams', (req, res) => {
     })
 })
 
+app.get('/api/teams/:id', (req, res) => {
+    console.log(req.user)
+    const db = req.app.get('db');
+    db.get_team([req.params.id]).then(resp => {
+        console.log(resp);
+        res.status(200).send(resp);
+    })
+})
 
-// app.delete('/api/teams/:id', (req, res)=>{
-//     console.log(req.params.id)
-//     const db = req.app.get('db');
-//     db.delete_team([req.params.id]).then(resp=>{
-//         console.log(resp)
-//         res.status(200).send(resp)
-//     })
-//     .catch(err => console.log(err))
-// })
+
+app.delete('/api/teams/:id', (req, res)=>{
+    console.log(req.params.id);
+    console.log(req.user);
+    const db = req.app.get('db');
+    db.delete_team([req.params.id, req.user.coaches_id]).then(resp=>{
+        console.log(resp)
+        res.status(200).send(resp)
+    })
+    .catch(err => console.log(err))
+})
+
+app.put('/api/teams/:id', (req, res)=>{
+    console.log(req.body);
+    const db = req.app.get('db');
+    const {team_name, sport, time_zone, country, zip_code, logo, teams_id} = req.body;
+    db.edit_team([team_name, sport, time_zone, country, zip_code, logo, teams_id, req.params.id]).then(resp=>{
+        console.log(resp)
+        res.status(200).send(resp)
+    })
+    .catch(err => console.log(err))
+})
 
 
 app.post('/api/teams', (req, res) => {
@@ -133,11 +201,30 @@ app.get('/api/schedule:id', (req, res) => {
     })
 })
 
+app.get('/api/schedule/:id', (req, res) => {
+    const db = req.app.get('db');
+    db.get_schedule_specific([req.params.id]).then(resp => {
+        console.log(resp);
+        res.status(200).send(resp);
+    })
+})
 
-app.delete('/api/schedule/:id', (req, res)=>{
+
+app.delete('/api/schedule/:id/:teams_id', (req, res)=>{
     console.log(req.params.id)
     const db = req.app.get('db');
-    db.delete_event([req.params.id]).then(resp=>{
+    db.delete_event([req.params.id, req.params.teams_id]).then(resp=>{
+        console.log(resp)
+        res.status(200).send(resp)
+    })
+    .catch(err => console.log(err))
+})
+
+app.put('/api/schedule/:id', (req, res)=>{
+    console.log(req.body);
+    const db = req.app.get('db');
+    const {event_name, event_date, event_time, event_location, teams_id} = req.body;
+    db.edit_event([event_name, event_date, event_time, event_location, teams_id, req.params.id]).then(resp=>{
         console.log(resp)
         res.status(200).send(resp)
     })
@@ -156,7 +243,7 @@ app.post('/api/schedule', (req, res) => {
 
 
 //roster table
-app.get('/api/roster/:id', (req, res) => {
+app.get('/api/rosters/:id', (req, res) => {
     console.log(req.params.id)
     const db = req.app.get('db');
     db.get_roster([req.params.id]).then(resp => {
@@ -165,11 +252,30 @@ app.get('/api/roster/:id', (req, res) => {
     })
 })
 
+app.get('/api/roster/:id', (req, res) => {
+    const db = req.app.get('db');
+    db.get_roster_specific([req.params.id]).then(resp => {
+        console.log(resp);
+        res.status(200).send(resp);
+    })
+})
 
-app.delete('/api/roster/:id', (req, res)=>{
+
+app.delete('/api/roster/:id/:teams_id', (req, res)=>{
     console.log(req.params.id)
     const db = req.app.get('db');
-    db.delete_player([req.params.id]).then(resp=>{
+    db.delete_player([req.params.id, req.params.teams_id]).then(resp=>{
+        console.log(resp)
+        res.status(200).send(resp)
+    })
+    .catch(err => console.log(err))
+})
+
+app.put('/api/roster/:id', (req, res)=>{
+    console.log(req.body);
+    const db = req.app.get('db');
+    const {jersey_number, photo, first_name, last_name, phone_number, email, date_of_birth, teams_id} = req.body;
+    db.edit_player([jersey_number, photo, first_name, last_name, phone_number, email, date_of_birth, teams_id, req.params.id]).then(resp=>{
         console.log(resp)
         res.status(200).send(resp)
     })

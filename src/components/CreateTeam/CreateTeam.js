@@ -34,6 +34,7 @@ class CreateTeam extends Component {
         axios.post('/api/teams', { team_name: this.state.team_name, sport: this.state.sport, time_zone: this.state.time_zone, country: this.state.country, zip_code: this.state.zip_code, logo: this.state.logo }).then(resp => {
             console.log(resp);
             toast.success('Team Added!');
+            setTimeout(() => {this.props.history.push('/home')}, 2505)
         })
         .catch((err) => {
             console.log(err);
@@ -45,7 +46,7 @@ class CreateTeam extends Component {
     render() {
         return (
             <div className='create-team-page'>
-                <ToastContainer />
+                <ToastContainer autoClose={2500} />
                 <div>
                     <Nav />
                 </div>
@@ -80,7 +81,7 @@ class CreateTeam extends Component {
                     {/* <h4 className='create-team-h4'>Logo</h4>
                     <input onChange={e => this.handleOnChange(e)} placeholder='  Logo' name='logo' type='text' src='submit.gif' /> */}
                     <button className='create-team-cancel-button' type='reset' value='Cancel'>Cancel</button>
-                    <button className='create-team-submit-button' onClick={ e => this.handleOnClick(e)}>+ Add a team</button>
+                    <button className='create-team-submit-button' onClick={ e => this.handleOnClick(e)}>+ Add team</button>
 
 
                 </form>

@@ -9,6 +9,11 @@ import Schedule from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/
 import Roster from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Roster/Roster.js';
 import HomeSchedule from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/HomeSchedule/HomeSchedule.js';
 import HomeRoster from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/HomeRoster/HomeRoster.js';
+import EditTeam from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/EditTeam/EditTeam.js';
+import EditEvent from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/EditEvent/EditEvent.js';
+import EditPlayer from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/EditPlayer/EditPlayer.js';
+import Stripe from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Stripe/Stripe.js';
+
 
 class App extends Component {
   render() {
@@ -24,6 +29,10 @@ class App extends Component {
             <Route path='/roster' component={Roster} />
             <Route path='/homeroster/:id' component={HomeRoster} />
             <Route path='/homeschedule/:id' component={HomeSchedule} />
+            <Route path='/editteam/:id' component={EditTeam} />
+            <Route path='/editevent/:id' component={EditEvent} />
+            <Route path='/editplayer/:id' component={EditPlayer} />
+            <Route path='/payment' component={Stripe} />
           </Switch>
         </HashRouter>
       </div>

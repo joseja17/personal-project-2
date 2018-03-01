@@ -3,6 +3,7 @@ import './HomeRoster.css';
 import Nav from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Nav/Nav.js';
 import Header from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Header/Header.js';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 
 class HomeRoster extends Component {
@@ -18,7 +19,7 @@ class HomeRoster extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/roster/' + this.props.match.params.id).then( resp => {
+        axios.get('/api/rosters/' + this.props.match.params.id).then( resp => {
             console.log(resp)
             this.setState({
                 resp: resp.data,
@@ -27,14 +28,16 @@ class HomeRoster extends Component {
         })
     }
 
-    deletePlayer(id){
-        axios.delete('/api/roster/' + id).then(resp =>{
-            console.log(resp)
+    deletePlayer(id, teamsID){
+        var r = window.confirm('Are you sure you want to delete this player?');
+        if (r===true) {
+        axios.delete('/api/roster/' + id + '/' + teamsID ).then(resp =>{
             console.log(resp.data)
             this.setState({
                 resp : resp.data
             })
         })
+     }
     }
 
     render() {
@@ -48,8 +51,8 @@ class HomeRoster extends Component {
                     <div className='roster-container-time-zone'>{val.phone_number}</div>
                     <div className='roster-container-country'>{val.email}</div>
                     <div className='roster-container-country'>{val.date_of_birth}</div>
-                    <button className='roster-container-button-edit'>Edit</button>
-                    <button className='roster-container-button-delete' onClick={ () => this.deletePlayer(val.player_id)}>Delete</button>
+                    <Link to={'/editplayer/'+val.player_id}><button className='roster-container-button-edit'>Edit</button></Link>
+                    <button className='roster-container-button-delete' onClick={ () => this.deletePlayer(val.player_id, val.teams_id)}>Delete</button>
                 </div>
             )
         })
