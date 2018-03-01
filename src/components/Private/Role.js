@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Header from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Header/Header.js';
-import '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Private/Role.css';
+import Header from './Header/Header.js';
+import './Private/Role.css';
 
 
 
 
 import {connect} from 'react-redux';
-import {getUser} from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/ducks/users.js';
+import {getUser} from './ducks/users.js';
 
 
 

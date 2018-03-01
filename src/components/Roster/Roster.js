@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Roster.css';
-import Nav from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Nav/Nav.js';
-import Header from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Header/Header.js';
+import Nav from './Nav/Nav.js';
+import Header from './Header/Header.js';
 import { ToastContainer, toast } from 'react-toastify';
 
 

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Home from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Home/Home.js';
+import Home from './components/Home/Home.js';
 import Login from './components/Login/Login';
-import Role from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Private/Role.js';
-import CreateTeam from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/CreateTeam/CreateTeam.js';
-import Schedule from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Schedule/Schedule.js';
-import Roster from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Roster/Roster.js';
-import HomeSchedule from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/HomeSchedule/HomeSchedule.js';
-import HomeRoster from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/HomeRoster/HomeRoster.js';
-import EditTeam from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/EditTeam/EditTeam.js';
-import EditEvent from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/EditEvent/EditEvent.js';
-import EditPlayer from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/EditPlayer/EditPlayer.js';
-import Stripe from '/Users/tannerkaysmith/devmtn/WPR32/personal-project-2/src/components/Stripe/Stripe.js';
+import Role from './components/Private/Role.js';
+import CreateTeam from './components/CreateTeam/CreateTeam.js';
+import Schedule from './components/Schedule/Schedule.js';
+import Roster from './components/Roster/Roster.js';
+import HomeSchedule from './components/HomeSchedule/HomeSchedule.js';
+import HomeRoster from './components/HomeRoster/HomeRoster.js';
+import EditTeam from './components/EditTeam/EditTeam.js';
+import EditEvent from './components/EditEvent/EditEvent.js';
+import EditPlayer from './components/EditPlayer/EditPlayer.js';
+import Stripe from './components/Stripe/Stripe.js';
 
 
 class App extends Component {
