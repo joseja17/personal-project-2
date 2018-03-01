@@ -82,6 +82,7 @@
     height: 30px;
     padding: 5px;
     padding-left: 0px;
+    margin: -2px;
 }
 
 .roster-container-sport {
@@ -162,7 +163,7 @@
 .roster-container-name-title {
     width: 155.5px;
     height: 20px;
-    margin: -29.5px;
+    margin: -23px;
 }
 
 .roster-container-button-edit-title {

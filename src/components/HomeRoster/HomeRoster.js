@@ -44,9 +44,10 @@ class HomeRoster extends Component {
         var rosterToDisplay = this.state.resp.map( (val, i) => {
             return (
                 <div key={i} className='roster-container'>
-                    <div className='roster-container-name'>{val.jersey_number}</div>
+                    
                     <div className='roster-container-time-zone'>{val.first_name}</div>
                     <div className='roster-container-country'>{val.last_name}</div>
+                    <div className='roster-container-name'>{val.jersey_number}</div>
                     <div className='roster-container-time-zone'>{val.phone_number}</div>
                     <div className='roster-container-country'>{val.email}</div>
                     <div className='roster-container-country'>{val.date_of_birth}</div>
@@ -85,9 +86,10 @@ class HomeRoster extends Component {
                 </div>
 
                 <div className='roster-container-title'>
-                    <div className='roster-container-name-title'>Jersery #</div>
+                    
                     <div className='roster-container-name-title'>First Name</div>
                     <div className='roster-container-name-title'>Last Name</div>
+                    <div className='roster-container-name-title'>Jersery #</div>
                     <div className='roster-container-name-title'>Phone #</div>
                     <div className='roster-container-name-title'>Email</div>
                     <div className='roster-container-name-title'>D.O.B.</div>

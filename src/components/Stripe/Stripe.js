@@ -3,6 +3,7 @@ import './Stripe.css';
 import axios from 'axios';
 import StripeCheckout from 'react-stripe-checkout';
 import Header from './../Header/Header.js';
+import Nav from './../Nav/Nav';
 
 class Stripe extends Component {
   constructor(props) {
@@ -32,13 +33,16 @@ class Stripe extends Component {
       return (
         <div className="Stripe">
         <div>
+          <Nav />
+          </div>
+        <div>
           <Header />
         </div>
         <div className='stripe-box'>
           <div className="Stripe-header">
-            {/* <img src={logo} className="Stripe-logo" alt="logo" /> */}
-            <h2>Donate with Stripe</h2>
-            {/* <input type='number' onChange={ () => changeAmount(e)}/> */}
+            {/* <img src='/logo.svg' className="Stripe-logo" alt="logo" /> */}
+            <h2 className='h2-stripe'>Donate with Stripe</h2>
+            {/* <input type='number' onChange={ () => changeAmount()}/> */}
           </div>
           <StripeCheckout className="sc"
             token={this.onToken} // get token back
