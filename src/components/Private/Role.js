@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header.js';
-import './Private/Role.css';
+import './Role.css';
 
 
 
