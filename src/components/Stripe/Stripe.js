@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Stripe.css';
 import axios from 'axios';
 import StripeCheckout from 'react-stripe-checkout';
-import Header from './Header/Header.js';
+import Header from './components/Header/Header.js';
 
 class Stripe extends Component {
   constructor(props) {
