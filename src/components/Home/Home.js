@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Nav from './components/Nav/Nav.js';
-import Header from './components/Header/Header.js';
+import Nav from './../Nav/Nav.js';
+import Header from './../Header/Header.js';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
