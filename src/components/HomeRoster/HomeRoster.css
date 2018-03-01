@@ -62,7 +62,7 @@
 
 .roster-container {
     font-family: 'Roboto', sans-serif;
-    height: 41px;
+    height: 45px;
     width: 830px;
     background: #F5F7FA;
     border-radius: 4px;
@@ -74,60 +74,76 @@
     color: #656D78;
     margin: 6px;
     margin-left: 75px;
-    padding-left: 15px;
-    padding-right: 5px;
+    padding: 15px 10px 0px 5px;
 }
 
 .roster-container-name {
-    width: 175px;
-    height: 20px;
+    width: 103px;
+    height: 30px;
+    padding: 5px;
+    padding-left: 0px;
 }
 
 .roster-container-sport {
-    width: 175px;
-    height: 20px;
+    width: 103px;
+    height: 30px;
+    padding: 5px;
 }
 
 .roster-container-time-zone {
-    width: 175px;
-    height: 20px;
+    width: 103px;
+    height: 30px;
+    padding: 5px;
 }
 
 .roster-container-country {
-    width: 175px;
-    height: 20px;
+    width: 103px;
+    height: 30px;
+    padding: 5px;
 }
 
 .roster-container-zip-code {
-    width: 175px;
-    height: 20px;
+    width: 103px;
+    height: 30px;
+    padding: 5px;
 }
 
 .roster-container-logo {
-    width: 175px;
-    height: 20px;
+    width: 50px;
+    height: 30px;
 }
 
 .roster-container-button-edit {
-    width: 59px;
-    height: 25px;
+    width: 62px;
+    height: 29px;
     background-color: #525566;
     border-radius: 4px;
     color: #FFFFFF;
     border: none;
+    margin: 8px 8px 23px 8px;
+}
+
+.roster-container-button-edit:hover {
+    background-color: #C7CBDC;
 }
 
 .roster-container-button-delete {
     width: 59px;
-    height: 25px;
+    height: 29px;
     background-color: #FF4553;
     border-radius: 4px;
     color: #FFFFFF;
     border: none;
+    margin: 8px 8px 23px 8px;
+}
+
+.roster-container-button-delete:hover {
+    background-color: rgba(255, 69, 85, 0.47);
 }
 
 .roster-container-title {
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     height: 41px;
     width: 830px;
     border-radius: 4px;
@@ -140,11 +156,11 @@
     margin: 6px;
     margin-left: 75px;
     padding-left: 15px;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 .roster-container-name-title {
-    width: 175px;
+    width: 155.5px;
     height: 20px;
     margin: -29.5px;
 }
@@ -184,6 +200,7 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: .5px;
+    margin-bottom: 25px;
 }
 
 .roster-container-button-new:hover {

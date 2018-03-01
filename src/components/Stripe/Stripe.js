@@ -9,7 +9,7 @@ class Stripe extends Component {
     super(props);
 
     this.state = {
-      amount: ''
+      amount: 0
     }
   }
 
@@ -20,6 +20,12 @@ class Stripe extends Component {
       // when the token is sent to use from Stripe, we make a post request to make the payment
       .then(response => { console.log('POST response', response); });
 
+    }
+
+    changeAmount(e) {
+      this.setState({
+        amount: e
+      })
     }
   
     render() {
@@ -32,6 +38,7 @@ class Stripe extends Component {
           <div className="Stripe-header">
             {/* <img src={logo} className="Stripe-logo" alt="logo" /> */}
             <h2>Donate with Stripe</h2>
+            {/* <input type='number' onChange={ () => changeAmount(e)}/> */}
           </div>
           <StripeCheckout className="sc"
             token={this.onToken} // get token back

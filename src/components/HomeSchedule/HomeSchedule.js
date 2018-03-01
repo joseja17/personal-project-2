@@ -86,7 +86,6 @@ class HomeSchedule extends Component {
                     <div className='schedule-container-name-title'>Time</div>
                     <div className='schedule-container-name-title'>Location</div>
                     <div className='schedule-container-name-title'></div>
-                    <div className='schedule-container-name-title'></div>
                     <div className='schedule-container-button-edit-title'> </div>
                     <div className='schedule-container-button-delete-title'> </div>
                 </div>

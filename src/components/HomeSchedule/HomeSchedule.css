@@ -62,7 +62,7 @@
 
 .schedule-container {
     font-family: 'Roboto', sans-serif;
-    height: 41px;
+    height: 45px;
     width: 830px;
     background: #F5F7FA;
     border-radius: 4px;
@@ -74,60 +74,80 @@
     color: #656D78;
     margin: 6px;
     margin-left: 75px;
-    padding-left: 15px;
-    padding-right: 5px;
+    padding: 15px 10px 0px 10px;
 }
 
 .schedule-container-name {
     width: 175px;
-    height: 20px;
+    height: 30px;
+    padding: 10px;
+    margin-left: -20px;
 }
 
 .schedule-container-sport {
     width: 175px;
-    height: 20px;
+    height: 30px;
+    padding: 5px;
+    margin-left: -25px;
 }
 
 .schedule-container-time-zone {
     width: 175px;
-    height: 20px;
+    height: 30px;
+    padding: 5px;
+    margin-left: -25px;
 }
 
 .schedule-container-country {
     width: 175px;
-    height: 20px;
+    height: 30px;
+    padding: 5px;
+    margin-left: -29px;
 }
 
 .schedule-container-zip-code {
     width: 175px;
-    height: 20px;
+    height: 30px;
+    padding: 5px;
+    margin-left: -20px;
 }
 
 .schedule-container-logo {
-    width: 175px;
-    height: 20px;
+    width: 50px;
+    height: 30px;
 }
 
 .schedule-container-button-edit {
-    width: 59px;
-    height: 25px;
+    width: 62px;
+    height: 29px;
     background-color: #525566;
     border-radius: 4px;
     color: #FFFFFF;
     border: none;
+    margin: 8px 18px 23px 8px;
+}
+
+.schedule-container-button-edit:hover {
+    background-color: #C7CBDC;
 }
 
 .schedule-container-button-delete {
     width: 59px;
-    height: 25px;
+    height: 29px;
     background-color: #FF4553;
     border-radius: 4px;
     color: #FFFFFF;
     border: none;
+    margin: 8px 18px 23px 8px;
+}
+
+.team-container-button-delete:hover {
+    background-color: rgba(255, 69, 85, 0.47);
 }
 
 .schedule-container-title {
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     height: 41px;
     width: 830px;
     border-radius: 4px;
@@ -139,14 +159,16 @@
     color: #656D78;
     margin: 6px;
     margin-left: 75px;
-    padding-left: 15px;
-    padding-right: 5px;
+    padding-left: 75px;
+    padding-right: 45px;
 }
 
 .schedule-container-name-title {
-    width: 175px;
+    width: 1080px;
     height: 20px;
-    margin: -29.5px;
+    margin: -130.5px;
+    padding-left: 80px;
+    padding-right: 116px;
 }
 
 .schedule-container-button-edit-title {
@@ -184,6 +206,7 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: .5px;
+    margin-bottom: 25px;
 }
 
 .schedule-container-button-new:hover {

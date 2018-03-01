@@ -86,8 +86,6 @@ class Roster extends Component {
                     <select onChange={e => this.handleOnSelect(e)} placeholder=' Select Team' className='roster-input'><option>Select Team</option>{teamNameToDisplay}</select>
                     <h4 className='roster-h4'>Jersery #</h4>
                     <input className='roster-input' onChange={e => this.handleOnChange(e)} placeholder='  ex. 23' name='jersey_number' type='text' />
-                    <h4 className='roster-h4'>Photo</h4>
-                    <input className='roster-input' onChange={e => this.handleOnChange(e)} placeholder='  Photo' name='photo' type='text' />
                     <h4 className='roster-h4'>First Name</h4>
                     <input className='roster-input' onChange={e => this.handleOnChange(e)} placeholder='  First Name' name='first_name' type='text' />
                     <h4 className='roster-h4'>Last Name</h4>

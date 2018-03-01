@@ -11,7 +11,7 @@
 }
 
 .schedule-box {
-	height: 397px;
+	height: 442px;
 	width: 386px;
 	border-radius: 8px;
 	background-color: #FFFFFF;
@@ -19,7 +19,6 @@
     margin: auto;
     margin-top: 125px;
     padding: 15px 60px 40px 60px;
-
 }
 
 .schedule-h4 {
@@ -63,7 +62,8 @@
 	width: 144px !important;
 	border-radius: 38.4px;
 	background-color: #75798C;
-	box-shadow: 0 2px 9px 0 #75798C;
+    box-shadow: 0 2px 9px 0 #75798C;
+    margin-top: 13px;
 }
 
 .schedule-submit-button {
@@ -75,14 +75,14 @@
 	width: 144px;
 	border-radius: 38.4px;
 	background-color: #2E6FEF;
-	box-shadow: 0 2px 9px 0 #75798C;
+    box-shadow: 0 2px 9px 0 #75798C;
+    margin-top: 13px;
 }
 
 .schedule-event {
 	color: #525566;
 	font-family: 'Roboto', 'sans-serif';
-	font-size: 17px;
+	font-size: 19px;
     font-weight: 500;
     padding: 0;
-    font-weight: 400;
 }

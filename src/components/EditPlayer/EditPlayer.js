@@ -82,10 +82,8 @@ class EditPlayer extends Component {
 
                     <h4 className='EditPlayer-h4'>{this.state.team_name}</h4>
                     
-                    <h4 className='EditPlayer-h4'>Jersery #</h4>
+                    <h4 className='EditPlayer-h4-jersey'>Jersery #</h4>
                     <input value={this.state.jersey_number} className='EditPlayer-input' onChange={e => this.handleOnChange(e)} placeholder='  ex. 23' name='jersey_number' type='text' />
-                    <h4 className='EditPlayer-h4'>Photo</h4>
-                    <input value={this.state.photo} className='EditPlayer-input' onChange={e => this.handleOnChange(e)} placeholder='  Photo' name='photo' type='text' />
                     <h4 className='EditPlayer-h4'>First Name</h4>
                     <input value={this.state.first_name} className='EditPlayer-input' onChange={e => this.handleOnChange(e)} placeholder='  First Name' name='first_name' type='text' />
                     <h4 className='EditPlayer-h4'>Last Name</h4>

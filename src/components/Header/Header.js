@@ -90,7 +90,7 @@ class Header extends Component {
                                     <hr className='hr' />
                                     <div>Change Account Name</div>
                                     <hr className='hr' />
-                                    <a className='logout' href='http://localhost:3005/logout'>Logout</a>
+                                    <a className='logout' href= {process.env.REACT_APP_LOCALHOST_3005+'/logout'}>Logout</a>
                                 </div>
                                 : null
                         }
@@ -108,5 +108,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { getUser })(Header);
-
-/* <a href='http://localhost:3005/logout'></a> */

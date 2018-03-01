@@ -95,7 +95,7 @@ class EditTeam extends Component {
                     {/* <h4 className='edit-team-h4'>Logo</h4>
                     <input onChange={e => this.handleOnChange(e)} placeholder='  Logo' name='logo' type='text' src='submit.gif' /> */}
                     <button className='edit-team-cancel-button' type='reset' value='Cancel'>Clear</button>
-                    <button className='edit-team-submit-button' onClick={ e => this.saveChanges(e)}>Save new team info</button>
+                    <button className='edit-team-submit-button' onClick={ e => this.saveChanges(e)}>Save Team Info</button>
 
 
                 </form>

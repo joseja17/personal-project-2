@@ -24,6 +24,9 @@ const {
 } = process.env;
 
 const app = express();
+
+app.use( express.static( `${__dirname}/../build` ) );
+
 app.use(cors());
 app.use(bodyparser.json());
 
@@ -120,7 +123,7 @@ passport.deserializeUser((coaches_id, done) => {
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#role'
+    successRedirect: process.env.REACT_APP_LOCALHOST+'/#role'
 }));
 
 app.get('/auth/me', (req, res) => {
@@ -133,7 +136,7 @@ app.get('/auth/me', (req, res) => {
 
 app.get('/logout', (req, res) => {
     req.logOut();
-    res.redirect('http://localhost:3000/')
+    res.redirect(process.env.REACT_APP_LOCALHOST+'/#/')
 })
 
 
