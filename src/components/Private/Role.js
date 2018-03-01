@@ -6,7 +6,7 @@ import './Role.css';
 
 
 import {connect} from 'react-redux';
-import {getUser} from './ducks/users.js';
+import {getUser} from './../../ducks/users.js';
 
 
 
