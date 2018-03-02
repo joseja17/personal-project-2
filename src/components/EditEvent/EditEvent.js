@@ -74,7 +74,7 @@ class EditEvent extends Component {
 
                     <div><h2 className='EditEvent-event' >Edit Event</h2></div>
 
-                    <h4 className='EditEvent-h4'>{this.state.team_name}</h4>
+                    <h4 className='this-state-team-name-h4'>{this.state.team_name}</h4>
                     
                     <h4 className='EditEvent-h4'>Event</h4>
                     <input value={this.state.event_name} className='EditEvent-input' onChange={e => this.handleOnChange(e)} placeholder='  This can be changged anytime' name='event_name' type='text' />

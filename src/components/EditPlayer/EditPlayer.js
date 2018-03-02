@@ -80,7 +80,7 @@ class EditPlayer extends Component {
 
                     <div><h2 className='EditPlayer-event' >Edit Player</h2></div>
 
-                    <h4 className='EditPlayer-h4'>{this.state.team_name}</h4>
+                    <h4 className='this-state-team-name-h4'>{this.state.team_name}</h4>
                     
                     <h4 className='EditPlayer-h4-jersey'>Jersery #</h4>
                     <input value={this.state.jersey_number} className='EditPlayer-input' onChange={e => this.handleOnChange(e)} placeholder='  ex. 23' name='jersey_number' type='text' />
