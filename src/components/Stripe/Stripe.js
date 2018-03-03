@@ -38,7 +38,7 @@ class Stripe extends Component {
     render() {
       return (
         <div className="Stripe">
-        <ToastContainer autoClose={3000} />
+        <ToastContainer autoClose={3500} />
         <div>
           <Nav />
           </div>
