@@ -4,6 +4,7 @@ import axios from 'axios';
 import StripeCheckout from 'react-stripe-checkout';
 import Header from './../Header/Header.js';
 import Nav from './../Nav/Nav';
+import { ToastContainer, toast } from 'react-toastify';
 
 class Stripe extends Component {
   constructor(props) {
@@ -19,8 +20,13 @@ class Stripe extends Component {
       token.card = void 0; // remove credit card info from token so it never hits server
       axios.post('/api/payment', { token, amount: this.state.amount } )
       // when the token is sent to use from Stripe, we make a post request to make the payment
-      .then(response => { console.log('POST response', response); });
-
+      .then(response => { console.log('POST response', response);
+      toast.info('Thank you for your donation!');
+    })
+    .catch((err) => {
+      console.log(err);
+      toast.error('Donation not processed...');
+  })
     }
 
     changeAmount(e) {
@@ -32,6 +38,7 @@ class Stripe extends Component {
     render() {
       return (
         <div className="Stripe">
+        <ToastContainer autoClose={3000} />
         <div>
           <Nav />
           </div>

@@ -51,7 +51,7 @@ class Roster extends Component {
         e.preventDefault();
         axios.post('/api/roster', { jersey_number: this.state.jersey_number, photo: this.state.photo, first_name: this.state.first_name, last_name: this.state.last_name, phone_number: this.state.phone_number, email: this.state.email, date_of_birth: this.state.date_of_birth, teams_id: this.state.teams_id }).then(resp => {
             console.log(resp);
-            toast.success('Player Added!');
+            toast.info('Player Added!');
             setTimeout(() => {this.props.history.push('/homeroster/'+this.state.teams_id)}, 2505)
         })
         .catch((err) => {

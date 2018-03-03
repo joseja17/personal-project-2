@@ -48,7 +48,7 @@ class Schedule extends Component {
         e.preventDefault();
         axios.post('/api/schedule', { event_name: this.state.event_name, event_date: this.state.event_date, event_time: this.state.event_time, event_location: this.state.event_location, teams_id: this.state.teams_id }).then(resp => {
             console.log(resp);
-            toast.success('Event Added!');
+            toast.info('Event Added!');
             setTimeout(() => {this.props.history.push('/homeschedule/'+this.state.teams_id)}, 2505)
         })
         .catch((err) => {

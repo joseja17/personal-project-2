@@ -47,7 +47,7 @@ class EditTeam extends Component {
         e.preventDefault();
         axios.put('/api/teams/' + this.props.match.params.id, { team_name: this.state.team_name, sport: this.state.sport, time_zone: this.state.time_zone, country: this.state.country, zip_code: this.state.zip_code, logo: this.state.logo, teams_id: this.state.teams_id }).then(resp => {
             console.log(resp);
-            toast.success('Team Edited!');
+            toast.info('Team Edited!');
             setTimeout(() => {this.props.history.push('/home')}, 2505)
         })
         .catch((err) => {

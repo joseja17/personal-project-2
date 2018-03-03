@@ -54,7 +54,7 @@ class EditPlayer extends Component {
         e.preventDefault();
         axios.put('/api/roster/' + this.props.match.params.id, { jersey_number: this.state.jersey_number, photo: this.state.photo, first_name: this.state.first_name, last_name: this.state.last_name, phone_number: this.state.phone_number, email: this.state.email, date_of_birth: this.state.date_of_birth, team_name: this.state.team_name, teams_id: this.state.teams_id }).then(resp => {
             console.log(resp);
-            toast.success('Player Saved!');
+            toast.info('Player Saved!');
             setTimeout(() => {this.props.history.push('/homeroster/'+this.state.teams_id)}, 2505)
         })
         .catch((err) => {
@@ -80,7 +80,7 @@ class EditPlayer extends Component {
 
                     <div><h2 className='EditPlayer-event' >Edit Player</h2></div>
 
-                    <h4 className='this-state-team-name-h4'>{this.state.team_name}</h4>
+                    <h4 className='this-state-team-name-h4-player'>{this.state.team_name}</h4>
                     
                     <h4 className='EditPlayer-h4-jersey'>Jersery #</h4>
                     <input value={this.state.jersey_number} className='EditPlayer-input' onChange={e => this.handleOnChange(e)} placeholder='  ex. 23' name='jersey_number' type='text' />

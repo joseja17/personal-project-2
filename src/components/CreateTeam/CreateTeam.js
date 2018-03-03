@@ -33,7 +33,7 @@ class CreateTeam extends Component {
         e.preventDefault();
         axios.post('/api/teams', { team_name: this.state.team_name, sport: this.state.sport, time_zone: this.state.time_zone, country: this.state.country, zip_code: this.state.zip_code, logo: this.state.logo }).then(resp => {
             console.log(resp);
-            toast.success('Team Added!');
+            toast.info('Team Added!');
             setTimeout(() => {this.props.history.push('/home')}, 2505)
         })
         .catch((err) => {

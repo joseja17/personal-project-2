@@ -48,7 +48,7 @@ class EditEvent extends Component {
         e.preventDefault();
         axios.put('/api/schedule/' + this.props.match.params.id, { event_name: this.state.event_name, event_date: this.state.event_date, event_time: this.state.event_time, event_location: this.state.event_location, teams_id: this.state.teams_id, team_name: this.state.team_name }).then(resp => {
             console.log(resp);
-            toast.success('Event Saved!');
+            toast.info('Event Saved!');
             setTimeout(() => {this.props.history.push('/homeschedule/'+this.state.teams_id)}, 2505)
         })
         .catch((err) => {
