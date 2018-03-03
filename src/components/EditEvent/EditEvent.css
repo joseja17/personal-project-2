@@ -11,7 +11,7 @@
 }
 
 .EditEvent-box {
-	height: 397px;
+	height: 410px;
 	width: 386px;
 	border-radius: 8px;
 	background-color: #FFFFFF;
@@ -95,4 +95,5 @@
     font-size: 17px;
     color: rgba(13, 67, 205, 0.915);
     margin-bottom: 20px;
+    margin-top: 35px;
 }

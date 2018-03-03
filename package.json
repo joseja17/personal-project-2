@@ -26,7 +26,8 @@
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^5.0.0",
     "stripe": "^5.5.0",
-    "switch": "0.0.0"
+    "switch": "0.0.0",
+    "twilio": "^3.12.0"
   },
   "scripts": {
     "start": "react-scripts start",

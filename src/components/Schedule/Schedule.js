@@ -80,7 +80,7 @@ class Schedule extends Component {
                     <div><h2 className='schedule-event' >Add Event</h2></div>
 
                     <h4 className='roster-h4'>Team</h4>
-                    <select onChange={e => this.handleOnSelect(e)} className='schedule-input'><option>Select Team</option>{teamNameToDisplay}</select>
+                    <select onChange={e => this.handleOnSelect(e)} className='schedule-inputtt'><option>Select Team</option>{teamNameToDisplay}</select>
                     <h4 className='schedule-h4'>Event</h4>
                     <input className='schedule-input' onChange={e => this.handleOnChange(e)} placeholder='  This can be changged anytime' name='event_name' type='text' />
                     <h4 className='schedule-h4'>Date</h4>

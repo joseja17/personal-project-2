@@ -64,7 +64,7 @@ class CreateTeam extends Component {
                     <h4 className='create-team-h4'>Sport</h4>
                     <input className='creat-input' onChange={e => this.handleOnChange(e)} placeholder='  Sport' name='sport' type='text' />
                     <h4 className='create-team-h4'>Time Zone</h4>
-                    <select className='creat-input' onChange={e => this.handleOnChange(e)} placeholder='  This helps with scheduling and such' name='time_zone' type='text'>
+                    <select className='creat-inputtt' onChange={e => this.handleOnChange(e)} placeholder='  This helps with scheduling and such' name='time_zone' type='text'>
                         <option value=''></option>
                         <option value='Hawaii'>Hawaii</option>
                         <option value='Alaskan'>Alaskan</option>

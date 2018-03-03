@@ -82,6 +82,7 @@
     height: 30px;
     padding: 10px;
     margin-left: -20px;
+    font-size: 12px;
 }
 
 .schedule-container-sport {
@@ -89,6 +90,7 @@
     height: 30px;
     padding: 5px;
     margin-left: -25px;
+    font-size: 12px;
 }
 
 .schedule-container-time-zone {
@@ -96,6 +98,8 @@
     height: 30px;
     padding: 5px;
     margin-left: -25px;
+    font-size: 12px;
+    
 }
 
 .schedule-container-country {
@@ -103,6 +107,7 @@
     height: 30px;
     padding: 5px;
     margin-left: -29px;
+    font-size: 12px;
 }
 
 .schedule-container-zip-code {
@@ -110,6 +115,7 @@
     height: 30px;
     padding: 5px;
     margin-left: -20px;
+    font-size: 12px;
 }
 
 .schedule-container-logo {

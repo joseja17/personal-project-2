@@ -25,7 +25,7 @@ class Stripe extends Component {
 
     changeAmount(e) {
       this.setState({
-        amount: e
+        amount: e*100
       })
     }
   
@@ -42,7 +42,7 @@ class Stripe extends Component {
           <div className="Stripe-header">
             {/* <img src='/logo.svg' className="Stripe-logo" alt="logo" /> */}
             <h2 className='h2-stripe'>Donate with Stripe</h2>
-            {/* <input type='number' onChange={ () => changeAmount()}/> */}
+            <input className='stripe-input' type='number' placeholder= ' ex. 50.00'onChange={ (e) => this.changeAmount(e.target.value)}/>
           </div>
           <StripeCheckout className="sc"
             token={this.onToken} // get token back

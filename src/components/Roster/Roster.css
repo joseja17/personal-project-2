@@ -49,6 +49,25 @@
     color: #9B9B9B;
 } 
 
+.roster-input::-webkit-input-placeholder{
+    font-size: 13px !important;
+}
+
+.roster-inputtt {
+    border: none;
+    box-shadow: none;
+	height: 36px;
+	width: 385px;
+	border-radius: 30px;
+    background-color: #F2F4FC;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 15px;
+    font-style: italic;
+    padding: 0;
+    color: #9B9B9B;
+    -webkit-appearance: none;
+} 
+
 .roster-input::placeholder {
     color: #9B9B9B;
     font-size: 12px;
