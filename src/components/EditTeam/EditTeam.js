@@ -74,7 +74,7 @@ class EditTeam extends Component {
                     <div><h2 className='edit-your-team' >Edit Your Team</h2></div>
 
                     <h4 className='edit-team-h4'>Team Name</h4>
-                    <input value={this.state.team_name} className='creat-input' onChange={e => this.handleOnChange(e)} placeholder='  This can be changged anytime' name='team_name' type='text' />
+                    <input value={this.state.team_name} className='creat-input' onChange={e => this.handleOnChange(e)} placeholder='  This can be changed anytime' name='team_name' type='text' />
                     <h4 className='edit-team-h4'>Sport</h4>
                     <input value={this.state.sport} className='creat-input' onChange={e => this.handleOnChange(e)} placeholder='  Sport' name='sport' type='text' />
                     <h4 className='edit-team-h4'>Time Zone</h4>

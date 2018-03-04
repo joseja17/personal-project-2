@@ -77,7 +77,7 @@ class EditEvent extends Component {
                     <h4 className='this-state-team-name-h4'>{this.state.team_name}</h4>
                     
                     <h4 className='EditEvent-h4'>Event</h4>
-                    <input value={this.state.event_name} className='EditEvent-input' onChange={e => this.handleOnChange(e)} placeholder='  This can be changged anytime' name='event_name' type='text' />
+                    <input value={this.state.event_name} className='EditEvent-input' onChange={e => this.handleOnChange(e)} placeholder='  This can be changed anytime' name='event_name' type='text' />
                     <h4 className='EditEvent-h4'>Date</h4>
                     <input value={this.state.event_date} className='EditEvent-input' onChange={e => this.handleOnChange(e)} placeholder='  ex. 01/08/2018' name='event_date' type='text' />
                     <h4 className='EditEvent-h4'>Time</h4>
