@@ -60,6 +60,10 @@ class Roster extends Component {
         })
     }
 
+    backToHome(e){
+        this.props.history.push('/home');
+    }
+
 
     render() {
         var teamNameToDisplay = this.state.teams.map( (val, i) => {
@@ -96,7 +100,7 @@ class Roster extends Component {
                     <input className='roster-input' onChange={e => this.handleOnChange(e)} placeholder='  Email' name='email' type='text' />
                     <h4 className='roster-h4'>Birthday</h4>
                     <input className='roster-input' onChange={e => this.handleOnChange(e)} placeholder='  ex. 01/09/1995' name='date_of_birth' type='text' />
-                    <button className='roster-cancel-button' type='reset' value='Cancel'>Cancel</button>
+                    <button className='roster-cancel-button' onClick={ e => this.backToHome(e)}>Cancel</button>
                     <button className='roster-submit-button' onClick={ e => this.handleOnClick(e)}>+ Add Player</button>
 
 

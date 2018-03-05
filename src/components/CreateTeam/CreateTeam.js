@@ -42,6 +42,11 @@ class CreateTeam extends Component {
         })
     }
 
+    backToHome(e){
+        this.props.history.push('/home');
+    }
+
+
 
     render() {
         return (
@@ -80,7 +85,7 @@ class CreateTeam extends Component {
                     <input className='creat-input' onChange={e => this.handleOnChange(e)} placeholder='  Zip' name='zip_code' type='text' />
                     {/* <h4 className='create-team-h4'>Logo</h4>
                     <input onChange={e => this.handleOnChange(e)} placeholder='  Logo' name='logo' type='text' src='submit.gif' /> */}
-                    <button className='create-team-cancel-button' type='reset' value='Cancel'>Cancel</button>
+                    <button className='create-team-cancel-button' onClick={ e => this.backToHome(e)}>Cancel</button>
                     <button className='create-team-submit-button' onClick={ e => this.handleOnClick(e)}>+ Add team</button>
 
 

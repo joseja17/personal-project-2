@@ -57,6 +57,10 @@ class Schedule extends Component {
         })
     }
 
+    backToHome(e){
+        this.props.history.push('/home');
+    }
+
 
     render() {
         var teamNameToDisplay = this.state.teams.map((val, i) => {
@@ -89,7 +93,7 @@ class Schedule extends Component {
                     <input className='schedule-input' onChange={e => this.handleOnChange(e)} placeholder='  ex. 06:30pm' name='event_time' type='text' />
                     <h4 className='schedule-h4'>Location</h4>
                     <input className='schedule-input' onChange={e => this.handleOnChange(e)} placeholder='  Location' name='event_location' type='text' />
-                    <button className='schedule-cancel-button' type='reset' value='Cancel'>Cancel</button>
+                    <button className='schedule-cancel-button' onClick={ e => this.backToHome(e)}>Cancel</button>
                     <button className='schedule-submit-button' onClick={e => this.handleOnClick(e)}>+ Add Event</button>
 
 
