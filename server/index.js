@@ -69,7 +69,7 @@ app.post('/api/payment', function (req, res, next) {
             amount: convertedAmt, // amount in cents, again
             currency: 'usd',
             source: req.body.token.id, // needs to be the token id
-            description: 'Test charge from react app' // any description you want
+            description: req.body.description // any description you want
         },
         function (err, charge) {
             if (err) return res.sendStatus(500); // error means charge failure
