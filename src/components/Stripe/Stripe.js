@@ -62,7 +62,7 @@ class Stripe extends Component {
     })
       return (
         <div className="Stripe">
-        <ToastContainer autoClose={3500} />
+        <ToastContainer autoClose={3400} />
         <div>
           <Nav />
           </div>
