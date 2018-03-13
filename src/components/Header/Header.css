@@ -130,3 +130,87 @@
   .manage-teams {
       color: #FFFFFF;
   }
+
+
+  /* TABLET */
+  .nav-body-tablet {
+    padding-top: 15px;
+    position: relative;
+    height: 46px;
+    width: 100vw;
+    box-shadow: 0 1px 10px 0 rgba(143, 166, 236, 0.199), 0 6px 14px 0 rgb(221, 221, 221);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.div1-tablet {
+    height: 37px;
+    width: 83px;
+}
+
+.div-tablet {
+    height: 37px;
+    width: 83px;
+}
+
+.span-tablet {
+    margin-right: 60px;
+    margin-top: 20px;
+}
+.avatar-tablet {
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+}
+
+.rallylogo-tablet {
+    height: 33px;	
+    width: 74px;
+  }
+
+  .dropdown-tablet {
+      padding: 10px;
+      right: 10px;
+      position: absolute;
+      width: 122px;
+      height: 115px;
+      background: #525566;
+      color: rgba(255, 255, 255, 0.952);
+      font-size: 13px;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 2px;
+      justify-content: space-around;
+      cursor: pointer;
+      font-weight: 300;
+  }
+
+  .hr-tablet {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-color: #C7CBDC;
+    width: 110px;
+    height: 2px;
+    margin: 4px;
+  }
+
+  .dropdowns-tablet {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 37px;
+    width: 83px;
+  }
+
+  .logout-tablet {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.952);
+  }
+
+  .manage-teams-tablet {
+      color: #FFFFFF;
+  }

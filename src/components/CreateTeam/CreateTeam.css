@@ -106,3 +106,112 @@
     font-weight: 500;
     padding: 0;
 }
+
+
+
+/* Tablet */
+.create-team-page-tablet {
+    background-color: white;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.create-team-box-tablet {
+	height: 399px;
+	width: 326px;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+    box-shadow: 0 10px 30px 0 #C7CBDC;
+    margin: auto;
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+.create-team-h4-tablet {
+	height: 15px;
+	width: 77px;
+	color: #4A4A4A;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 14px;
+	font-weight: 500;
+    line-height: 15px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.creat-input-tablet {
+    border: none;
+    box-shadow: none;
+	height: 32px;
+	width: 285px;
+	border-radius: 30px;
+    background-color: #F2F4FC;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 15px;
+    font-style: italic;
+    padding: 0;
+    color: #9B9B9B;
+} 
+
+.creat-inputtt-tablet {
+    border: none;
+    box-shadow: none;
+	height: 32px;
+	width: 285px;
+	border-radius: 30px !important;
+    background-color: #F2F4FC;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 15px;
+    font-style: italic;
+    padding: 0;
+    color: #9B9B9B;
+    -webkit-appearance: none;
+} 
+
+.creat-input-table::-webkit-input-placeholder{
+    font-size: 13px !important;
+}
+
+.creat-input-tablet::placeholder {
+    color: #9B9B9B;
+    font-size: 12px;
+}
+
+.create-team-cancel-button-tablet {
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14.5px;
+	height: 34.4px;
+	width: 124px !important;
+	border-radius: 38.4px;
+	background-color: #75798C;
+    box-shadow: 0 2px 9px 0 #75798C;
+    margin-top: 13px;
+}
+
+.create-team-submit-button-tablet {
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14.5px;
+	height: 34.4px;
+	width: 124px !important;
+	border-radius: 38.4px;
+	background-color: #2E6FEF;
+    box-shadow: 0 2px 9px 0 #75798C;
+    margin-top: 13px;
+}
+
+.create-your-team-tablet {
+	color: #525566;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 19px;
+    font-weight: 500;
+    padding: 0;
+}

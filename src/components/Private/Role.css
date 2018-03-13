@@ -114,3 +114,120 @@ h1 {
     background-color: #0D43CD;
 }
 
+/* TABLET */
+.App-tablet {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.h1-tablet {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+    color: #525566;
+    padding-bottom: 28px;
+    font-weight: 400;
+    width: 315px;
+    font-size: 30px;
+}
+
+.pictures-tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.img-tablet {
+    height:140px;
+    width: 110px;
+    padding-right: 32px;
+}
+
+.img1-tablet {
+    height:140px;
+    width: 110px;
+    padding-left: 32px;
+}
+
+.role-tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 5px;
+}
+
+.h2-tablet {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #525566;
+    margin-left: -7px;
+    padding-right: 35px;
+    font-weight: 400;
+}
+
+.h21-tablet {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #525566;
+    padding-left: 5px;
+    font-weight: 400;
+}
+
+.buttons-tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 20px;
+}
+
+.button-tablet {
+    margin-right: 4px;
+    width: 143px;
+    height: 45px;
+    color: rgba(255, 255, 255, 0.952);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 45px;
+    background-color: #2962FF;
+    box-shadow: 0 1px 10px 0 rgba(253,134,142,0.3), 0 6px 14px 0 #C7CBDC;
+}
+
+.button1-tablet {
+    margin-left: 50px;
+    width: 143px;
+    height: 45px;
+    color: rgba(255, 255, 255, 0.952);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 45px;
+    background-color: #2962FF;
+    box-shadow: 0 1px 10px 0 rgba(253,134,142,0.3), 0 6px 14px 0 #C7CBDC;
+}
+
+.button1-tablet:hover {
+    background-color: #0D43CD;
+}
+
+.button-tablet:hover {
+    background-color: #0D43CD;
+}
+
+

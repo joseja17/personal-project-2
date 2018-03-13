@@ -4,6 +4,10 @@ import './EditEvent.css';
 import Nav from './../Nav/Nav.js';
 import Header from './../Header/Header.js';
 import { ToastContainer, toast } from 'react-toastify';
+import Responsive from 'react-responsive';
+
+const Desktop = props => <Responsive {...props} minWidth={1025} />;
+const Tablet = props => <Responsive {...props} minWidth={1} maxWidth={1024} />;
 
 
 
@@ -60,6 +64,8 @@ class EditEvent extends Component {
 
     render() {
         return (
+            <div>
+                <Desktop>
             <div className='EditEvent-page'>
                 <ToastContainer autoClose={2500}/>
                 <div>
@@ -90,6 +96,47 @@ class EditEvent extends Component {
 
                 </form>
 
+            </div>
+            </Desktop>
+
+
+            <Tablet>
+
+                <div className='EditEvent-page-tablet'>
+                <ToastContainer autoClose={2500}/>
+                
+
+                <div>
+                    <Header />
+                </div>
+
+                <form className='EditEvent-box-tablet'>
+
+                    <div><h2 className='EditEvent-event-tablet' >Edit Event</h2></div>
+
+                    <h4 className='this-state-team-name-h4-tablet'>{this.state.team_name}</h4>
+                    
+                    <h4 className='EditEvent-h4-tablet'>Event</h4>
+                    <input value={this.state.event_name} className='EditEvent-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  This can be changed anytime' name='event_name' type='text' />
+                    <h4 className='EditEvent-h4-tablet'>Date</h4>
+                    <input value={this.state.event_date} className='EditEvent-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  ex. 01/08/2018' name='event_date' type='text' />
+                    <h4 className='EditEvent-h4-tablet'>Time</h4>
+                    <input value={this.state.event_time} className='EditEvent-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  ex. 06:30pm' name='event_time' type='text' />
+                    <h4 className='EditEvent-h4-tablet'>Location</h4>
+                    <input value={this.state.event_location} className='EditEvent-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  Location' name='event_location' type='text' />
+                    <button className='EditEvent-cancel-button-tablet' type='reset' value='Cancel'>Clear</button>
+                    <button className='EditEvent-submit-button-tablet' onClick={e => this.saveChanges(e)}>Save Event</button>
+
+
+                </form>
+
+                <div>
+                    <Nav />
+                </div>
+
+            </div>
+
+            </Tablet>
             </div>
         )
     }

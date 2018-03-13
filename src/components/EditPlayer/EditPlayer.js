@@ -4,6 +4,10 @@ import './EditPlayer.css';
 import Nav from './../Nav/Nav.js';
 import Header from './../Header/Header.js';
 import { ToastContainer, toast } from 'react-toastify';
+import Responsive from 'react-responsive';
+
+const Desktop = props => <Responsive {...props} minWidth={1025} />;
+const Tablet = props => <Responsive {...props} minWidth={1} maxWidth={1024} />;
 
 
 
@@ -66,6 +70,8 @@ class EditPlayer extends Component {
 
     render() {
         return (
+            <div>
+                <Desktop>
             <div className='EditPlayer-page'>
                 <ToastContainer autoClose={2500}/>
                 <div>
@@ -100,6 +106,51 @@ class EditPlayer extends Component {
 
                 </form>
 
+            </div>
+            </Desktop>
+
+
+            <Tablet>
+
+                <div className='EditPlayer-page-tablet'>
+                <ToastContainer autoClose={2500}/>
+                
+
+                <div>
+                    <Header />
+                </div>
+
+                <form className='EditPlayer-box-tablet'>
+
+                    <div><h2 className='EditPlayer-event-tablet' >Edit Player</h2></div>
+
+                    <h4 className='this-state-team-name-h4-player-tablet'>{this.state.team_name}</h4>
+                    
+                    <h4 className='EditPlayer-h4-jersey-tablet'>Jersery #</h4>
+                    <input value={this.state.jersey_number} className='EditPlayer-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  ex. 23' name='jersey_number' type='text' />
+                    <h4 className='EditPlayer-h4-tablet' >First Name</h4>
+                    <input value={this.state.first_name} className='EditPlayer-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  First Name' name='first_name' type='text' />
+                    <h4 className='EditPlayer-h4-tablet' >Last Name</h4>
+                    <input value={this.state.last_name} className='EditPlayer-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  Last Name' name='last_name' type='text' />
+                    <h4 className='EditPlayer-h4-tablet' >Phone #</h4>
+                    <input value={this.state.phone_number} className='EditPlayer-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  ex. 4357731375' name='phone_number' type='text' />
+                    <h4 className='EditPlayer-h4-tablet' >Email</h4>
+                    <input value={this.state.email} className='EditPlayer-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  Email' name='email' type='text' />
+                    <h4 className='EditPlayer-h4-tablet' >Birthday</h4>
+                    <input value={this.state.date_of_birth} className='EditPlayer-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  ex. 01/09/1995' name='date_of_birth' type='text' />
+                    <button className='EditPlayer-cancel-button-tablet' type='reset' value='Cancel'>Clear</button>
+                    <button className='EditPlayer-submit-button-tablet' onClick={ e => this.saveChanges(e)}>Save Player</button>
+
+
+                </form>
+
+                <div>
+                    <Nav />
+                </div>
+
+            </div>
+
+            </Tablet>
             </div>
         )
     }

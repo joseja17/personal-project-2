@@ -222,3 +222,251 @@
     padding-right: 67px;
     padding-left: 66px;
 }
+
+/* TABLET */
+.homeroster-tablet {
+    background: #FFFFFF;
+  }
+  
+  .center-circle-tablet {
+      height: 365px;
+      width: 365px;
+      background-color: #F2F4FC;
+      border-radius: 50%;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .no-roster-text-tablet {
+      color: #525566;
+      width: 228px;
+      height: 52px;
+      text-align: center;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 5px;
+  }
+  
+  .roster-icon-tablet {
+      width: 215px;
+      height: 185px;
+  }
+  
+  .roster-logo-tablet {
+      width: 190px;
+      height: 185px;
+  }
+  
+  .add-roster-button-tablet {
+      height: 42.7px;
+      width: 159.1px;
+      border-radius: 36px;
+      background-color: rgb(18, 77, 241);
+      box-shadow: 0 2px 8px 0 #75798C;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      border: none;
+  }
+  
+  .add-roster-button-tablet:hover {
+      background-color: #0D43CD;
+    }
+  
+  .aaa-tablet {
+      text-decoration: none;
+  }
+
+  .roster-container-title-tablet {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    height: 41px;
+    width: 350px;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+    font-size: 11px;
+    color: #656D78;
+    margin-right: none;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.roster-container-name-title-tablet{
+    width: 64px !important;
+    padding: 0px !important;
+    margin-left: -6px !important;
+}
+  
+  .roster-container-tablet-aaa {
+    font-family: 'Roboto', sans-serif;
+    height: 48px;
+    width: 350px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    font-size: 11px;
+    color: #656D78;
+    margin: none;
+  }
+
+  .roster-container-tablet {
+    font-family: 'Roboto', sans-serif;
+    height: 85px;
+    width: 350px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #656D78;
+    margin-bottom: 51px;
+    
+}
+
+  .roster-container-info-tablet {
+    display: flex;
+    flex-direction: row;
+}
+
+.roster-container-buttons-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+  .roster-container-name-tablet {
+    width: 68px;
+    height: 20px;
+    padding: 5px;
+    font-size: 9px;
+  }
+  
+  .roster-container-sport-tablet {
+    width: 68px;
+    height: 30px;
+    padding: 5px;
+    font-size: 9px;
+  }
+  
+  .roster-container-time-zone-tablet {
+    width: 68px;
+    height: 20px;
+    padding: 5px;
+    font-size: 9px;
+  }
+  
+  .roster-container-country-tablet {
+    width: 68px;
+    height: 20px;
+    padding: 5px;
+    font-size: 9px;
+  }
+  
+  .roster-container-zip-code-tablet {
+    width: 68px;
+    height: 30px;
+    padding: 5px;
+    font-size: 9px;
+  }
+  
+  .roster-container-button-edit-tablet {
+      width: 62px;
+      height: 29px;
+      background-color: #525566;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+      margin: 2px 8px 18px 8px;
+  }
+  
+  .roster-container-button-edit-tablet:hover {
+      background-color: #C7CBDC;
+  }
+  
+  .roster-container-button-delete-tablet {
+      width: 62px;
+      height: 29px;
+      background-color: #FF4553;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+      margin: 2px 8px 18px 8px;
+  }
+  
+  .roster-container-button-delete-tablet:hover {
+      background-color: rgba(255, 69, 85, 0.47);
+  }
+  
+  
+  
+  .roster-container-name-title-tablet {
+      width: 70px;
+      height: 20px;
+      font-weight: 600;
+      padding: 0px;
+      margin: 0px;
+  }
+  
+  .roster-container-button-edit-title-tablet {
+      width: 59px;
+      height: 25px;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+  }
+  
+  .roster-container-button-delete-title-tablet {
+      width: 59px;
+      height: 25px;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+  }
+  
+  .rosters-title-h1-tablet {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(103, 106, 122);
+    font-size: 28px;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 25px;
+  }
+  
+  .roster-container-button-new-tablet {
+    height: 25px;
+    width: 67px;
+    border-radius: 5px;
+    background-color: #525566;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .5px;
+  }
+  
+  .roster-container-button-new-tablet:hover {
+      background-color: #C7CBDC;
+  }
+  
+  .roster-container-button-new-1-tablet {
+    height: 25px;
+    width: 67px;
+    border: none;
+    background: none;
+    padding-right: 67px;
+    padding-left: 66px;
+  }
+
+  .hr-tablet-aaa {
+    border: solid .1px;
+    border-color: rgba(104, 104, 104, 0.753) !important;
+    width: 260px;
+    border-radius: 24px;
+  }

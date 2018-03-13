@@ -50,3 +50,74 @@ li {
     height: 26px;
     width: 26px;
 }
+
+
+/* TABLET */
+.Nav-tablet {
+    height: 40px;
+    width: 99vw;
+    border: 2px solid #F2F4FC;
+    background-color: rgba(248, 244, 244, 0);
+    box-shadow: 1px 0 4px 0 #DDE0EE;
+    position: fixed;
+    bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    .ul-tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0px;
+        background-color: #FFFFFF;
+        height: 50px;
+        margin: 0px;
+    }
+    
+    .RallyAroundUs-tablet {
+        color: #0D43CD;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .icons-tablet {
+        height: 19px;
+        width: 19px;
+        margin-left: 13px;
+        margin-right: 13px;
+        margin-top: 10px;
+    }
+    
+    .aaa-tablet:hover {
+        cursor: pointer;
+    }
+    
+    .roster-icons-tablet {
+        height: 26px;
+        width: 26px;
+        margin-left: 13px;
+        margin-right: 13px;
+        margin-top: 10px;
+    }
+
+    .Home-tablet {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .Roster-tablet {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .Schedule-tablet {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .Donate-tablet {
+        padding: 0px;
+        margin: 0px;
+    }

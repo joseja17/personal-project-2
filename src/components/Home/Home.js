@@ -4,6 +4,10 @@ import Nav from './../Nav/Nav.js';
 import Header from './../Header/Header.js';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import Responsive from 'react-responsive';
+
+const Desktop = props => <Responsive {...props} minWidth={1025} />;
+const Tablet = props => <Responsive {...props} minWidth={1} maxWidth={1024} />;
 
 
 class Home extends Component {
@@ -59,7 +63,31 @@ class Home extends Component {
             )
         })
 
+
+        var teamsToDisplayTablet = this.state.resp.map( (val, i) => {
+            return (
+                <div key={i} className='team-container-tablet'>
+                    <div className='team-container-info-tablet'>
+                    <div className='team-container-name-tablet'>{val.team_name}</div>
+                    <div className='team-container-sport-tablet'>{val.sport}</div>
+                    <div className='team-container-time-zone-tablet'>{val.time_zone}</div>
+                    <div className='team-container-country-tablet'>{val.country}</div>
+                    <div className='team-container-zip-code-tablet'>{val.zip_code}</div>
+                    </div>
+                    <hr className='hr-tablet-aaa'/>
+                    <div className='team-container-buttons-tablet'>
+                    <Link to={'/homeroster/'+val.teams_id}><button className='team-container-button-edit-tablet'>Roster</button></Link >
+                    <Link to={'/homeschedule/'+val.teams_id}><button className='team-container-button-edit-tablet'>Schedule</button></Link >
+                    <Link to={'/editteam/'+val.teams_id}><button className='team-container-button-edit-tablet'>Edit</button></Link >
+                    <button className='team-container-button-delete-tablet' onClick={ () => this.deleteTeam(val.teams_id)}>Delete</button>
+                </div>
+                </div>
+            )
+        })
+
         return (
+            <div>
+                <Desktop>
             <center><div className="Home">
 
                 <div className='home-navvv'>
@@ -104,6 +132,55 @@ class Home extends Component {
                 </div>}
 
             </div></center>
+            </Desktop>
+
+
+
+
+            <Tablet>
+            <center><div className="Home-tablet">
+
+                
+
+                <div className='home-header-tablet'>
+                    <Header />
+                </div>
+
+                
+
+                { this.state.resp.length ? 
+                    <div>
+                    <div><h1 className='teams-title-h1-tablet'>Teams</h1></div>
+
+                <div className='team-container-tablet-aaa' >
+                <a href='/#/createteam'><button className='team-container-button-new-tablet'>+ New</button></a>
+                    <button className='team-container-button-new-tablet'>Import</button>
+                    <button className='team-container-button-new-tablet'>Export</button>
+                    <button className='team-container-button-new-tablet'>Settings</button>
+                    
+                </div>
+
+                <div className='team-container-title-tablet'>
+                    <div className='team-container-name-title-tablet'>Team Name</div>
+                    <div className='team-container-name-title-tablet'>Sport</div>
+                    <div className='team-container-name-title-tablet'>Time Zone</div>
+                    <div className='team-container-name-title-tablet'>Country</div>
+                    <div className='team-container-name-title-tablet'>Zip Code</div>
+                </div>
+                    
+                    {teamsToDisplayTablet} </div> : <div className='center-circle-tablet'>
+                    <div className='no-team-text-tablet'>Looks like you haven't created a team yet :(</div>
+                    <div className='player-icon-tablet'><img className='player-svg-icon-tablet' src='/player.svg' alt='player-icon'/></div>
+                    <div ><a href='/#/createteam'><button  className='add-team-button-tablet'>+ Add a team</button></a></div>
+                </div>}
+
+                <div className='home-navvv-tablet'>
+                    <Nav />
+                </div>
+
+            </div></center>
+            </Tablet>
+            </div>
         )
     }
 

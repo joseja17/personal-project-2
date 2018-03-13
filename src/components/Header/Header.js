@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getUser } from './../../ducks/users';
 import './Header.css';
+import Responsive from 'react-responsive';
 
 
 
@@ -19,7 +20,7 @@ class Header extends Component {
         this.mouseLeave = this.mouseLeave.bind(this);
         this.onClickTeam = this.onClickTeam.bind(this);
         this.mouseLeaveTeam = this.mouseLeaveTeam.bind(this);
-        
+
 
     }
     componentDidMount() {
@@ -51,52 +52,78 @@ class Header extends Component {
     }
 
     render() {
+
+        const Desktop = props => <Responsive {...props} minWidth={1025} />;
+        const Tablet = props => <Responsive {...props} minWidth={1} maxWidth={1024} />;
+
         let { userData } = this.props;
         return (
-            <nav className='nav-body'>
+            <div>
+                <Desktop>
+                    <nav className='nav-body'>
 
-                <div className='div'></div>
+                        <div className='div'></div>
 
-                <div className='div1'><img className="rallylogo" src="/logo.svg" alt='rally-logo' /></div>
+                        <div className='div1'><img className="rallylogo" src="/logo.svg" alt='rally-logo' /></div>
 
-                <div className='dropdowns'>
+                        <div className='dropdowns'>
 
-                    {/* <div className='whole-dropdown1'>
-                        <div className='teams'><h2 onMouseEnter={this.onClickTeam} className='h2-teams'>Teams</h2></div>
-                        {
-                            this.state.dropdownTeam ?
-                            <div onMouseLeave={this.mouseLeaveTeam} className='dropdown1'>
-                                <div>SC Rugby</div>
-                                <hr className='hr1'/>
-                                <div>SC Football</div>
-                                <hr className='hr1'/>
-                                <div><button className='create-team'>+ Create Team</button></div>
-
+                            <div className='whole-dropdown'>
+                                <span onMouseEnter={this.onClick} className="span">{userData.img ? <img className='avatar' src={userData.img} alt='avatar' /> : null} </span>
+                                {
+                                    this.state.dropdown ?
+                                        <div onMouseLeave={this.mouseLeave} className='dropdown'>
+                                            <a className='aaa' href='/#/home'><div className='manage-teams'>Manage teams</div></a>
+                                            <hr className='hr' />
+                                            <div>Account Settings</div>
+                                            <hr className='hr' />
+                                            <div>Billing/Plans</div>
+                                            <hr className='hr' />
+                                            <div>Change Account Name</div>
+                                            <hr className='hr' />
+                                            <a className='logout' href={process.env.REACT_APP_LOCALHOST_3005 + '/logout'}>Logout</a>
+                                        </div>
+                                        : null
+                                }
                             </div>
-                            : null
-                        }
-                    </div> */}
+                        </div>
+                    </nav>
+                </Desktop>
 
-                    <div className='whole-dropdown'>
-                        <span onMouseEnter={this.onClick} className="span">{userData.img ? <img className='avatar' src={userData.img} alt='avatar' /> : null} </span>
-                        {
-                            this.state.dropdown ?
-                                <div onMouseLeave={this.mouseLeave} className='dropdown'>
-                                    <a className='aaa' href='/#/home'><div className='manage-teams'>Manage teams</div></a>
-                                    <hr className='hr' />
-                                    <div>Account Settings</div>
-                                    <hr className='hr' />
-                                    <div>Billing/Plans</div>
-                                    <hr className='hr' />
-                                    <div>Change Account Name</div>
-                                    <hr className='hr' />
-                                    <a className='logout' href= {process.env.REACT_APP_LOCALHOST_3005+'/logout'}>Logout</a>
-                                </div>
-                                : null
-                        }
-                    </div>
-                </div>
-            </nav>
+
+                <Tablet>
+
+                    <nav className='nav-body-tablet'>
+
+                        <div className='div-tablet'></div>
+
+                        <div className='div1-tablet'><img className="rallylogo-tablet" src="/logo.svg" alt='rally-logo' /></div>
+
+                        <div className='dropdowns-tablet'>
+
+                            <div className='whole-dropdown-tablet'>
+                                <span onClick={this.onClick} className="span-tablet">{userData.img ? <img className='avatar-tablet' src={userData.img} alt='avatar' /> : null} </span>
+                                {
+                                    this.state.dropdown ?
+                                        <div onClick={this.mouseLeave} className='dropdown-tablet'>
+                                            <a className='aaa-tablet' href='/#/home'><div className='manage-teams-tablet'>Manage teams</div></a>
+                                            <hr className='hr-tablet' />
+                                            <div className='manage-teams-tablet' >Account Settings</div>
+                                            <hr className='hr-tablet' />
+                                            <div className='manage-teams-tablet' >Billing/Plans</div>
+                                            <hr className='hr-tablet' />
+                                            <div className='manage-teams-tablet' >Edit Account</div>
+                                            <hr className='hr-tablet' />
+                                            <a className='logout-tablet' href={process.env.REACT_APP_LOCALHOST_3005 + '/logout'}>Logout</a>
+                                        </div>
+                                        : null
+                                }
+                            </div>
+                        </div>
+                    </nav>
+
+                </Tablet>
+            </div>
         )
     }
 }

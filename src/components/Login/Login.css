@@ -178,4 +178,175 @@
       color: #F2F4FC !important;
       border-color: #F2F4FC !important;
   }
+
+
+  /* TABLET */
+.App-tablet {
+  text-align: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+ }
+
+ .rally-logo-tablet {
+  margin: 20px;
+  height: 37px;	
+  width: 83px;
+}
+
+.header-tablet {
+  z-index: 10;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  box-shadow: 0 1px 10px 0 rgba(119, 119, 119, 0.219), 0 6px 14px 0 rgb(221, 221, 221);
+}
+
+  .splash-screen-tablet {
+    margin-top: -10px;
+    border-radius: 10px;
+    height: 420px;
+    width: 280px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .helo-tablet {
+    font-size: 34px;
+    color: #525566;
+    font-family: 'Roboto', sans-serif;
+    margin: 40px;
+    font-weight: 400;
+  }
+
+  button {
+    margin: 10px;
+  }
+
+  .signup-google-logo-tablet {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding-right: 15px;
+  }
+
+  .google-a-tablet {
+    text-decoration: none;
+  }
+
+  .signup-google-tablet {
+    font-weight: 300 !important;
+    text-align: center;
+    background: white;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+    height: 44px;
+    width: 250px;
+    border-radius: 45px;
+    background-color: #FF4553;
+    box-shadow: 0 1px 10px 0 rgba(253,134,142,0.3), 0 6px 14px 0 #C7CBDC;
+  }
+
+  .signup-google-tablet:hover {
+    background-color: #EB2937
+  }
+
+  .signup-email-tablet:hover {
+    background-color: #0D43CD;
+  }
+
+  .signup-email-tablet {
+    font-weight: 300 !important;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+    height: 44px;
+    width: 250px;
+    border-radius: 45px;
+    background-color: #2962FF;
+    box-shadow: 0 1px 10px 0 rgba(253,134,142,0.3), 0 6px 14px 0 #C7CBDC;
+  }
+
+  .email-a-tablet {
+    text-decoration: none;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .or-tablet {
+    opacity: 0.8;
+    font-size: 12.8px !important;
+    line-height: 19px;
+    text-align: center;
+    color: #525566;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 400 !important;
+  }
+
+  .account-already-tablet {
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 12.8px !important;
+    line-height: 19px;
+    text-align: center;
+    color: #525566;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+    font-weight: 400 !important;
+  }
+
+  .or-div-tablet {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  }
+
+  hr {
+      height: 1.8px;
+      width: 100px;
+      border: 0px;
+      background-color: #F2F4FC !important;
+      color: #F2F4FC !important;
+      border-color: #F2F4FC !important;
+  }
   

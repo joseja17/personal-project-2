@@ -215,3 +215,248 @@
     padding-right: 67px;
     padding-left: 66px;
 }
+
+
+
+
+
+/* TABLET */
+.Home-tablet {
+    background: #FFFFFF;
+  }
+  
+  .center-circle-tablet {
+      height: 365px;
+      width: 365px;
+      background-color: #F2F4FC;
+      border-radius: 50%;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 51px;
+  }
+  
+  .no-team-text-tablet {
+      color: #525566;
+      width: 200px;
+      height: 42px;
+      text-align: center;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+  }
+  
+  .player-icon-tablet {
+      width: 145px;
+      height: 185;
+      margin-top: 22px;
+      margin-bottom: 22px;
+  }
+
+  .player-svg-icon-tablet {
+    width: 105px;
+    height: 135;
+}
+  
+  .add-team-button-tablet {
+      height: 44.7px;
+      width: 169.1px;
+      border-radius: 36px;
+      background-color: rgb(18, 77, 241);
+      box-shadow: 0 2px 8px 0 #75798C;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      border: none;
+  }
+  
+  .add-team-button-tablet:hover {
+      background-color: #0D43CD;
+    }
+  
+  .aaa-tablet {
+      text-decoration: none;
+  }
+  
+  .team-container-title-tablet {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      height: 41px;
+      width: 350px;
+      border-radius: 4px;
+      display: flex;
+      flex-wrap: nowrap;
+      text-align: center;
+      align-items: center;
+      font-size: 12px;
+      color: #656D78;
+      margin: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .team-container-tablet-aaa {
+    font-family: 'Roboto', sans-serif;
+    height: 48px;
+    width: 350px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    font-size: 11px;
+    color: #656D78;
+    margin: none;
+}
+  
+  .team-container-tablet {
+      font-family: 'Roboto', sans-serif;
+      height: 91px;
+      width: 350px;
+      background: #F5F7FA;
+      border-radius: 4px;
+      font-size: 11px;
+      color: #656D78;
+      margin-bottom: 51px;
+      
+  }
+
+  .team-container-info-tablet {
+    display: flex;
+    flex-direction: row;
+}
+
+.team-container-buttons-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+  .team-container-name-tablet {
+      width: 60px;
+      height: 30px;
+      padding: 5px;
+      font-size: 12px;
+  }
+  
+  .team-container-sport-tablet {
+      width: 63px;
+      height: 30px;
+      padding: 5px;
+      font-size: 12px;
+  }
+  
+  .team-container-time-zone-tablet {
+      width: 55px;
+      height: 30px;
+      padding: 5px;
+      font-size: 12px;
+  }
+  
+  .team-container-country-tablet {
+      width: 59px;
+      height: 30px;
+      padding: 5px;
+      font-size: 12px;
+  }
+  
+  .team-container-zip-code-tablet {
+      width: 55px;
+      height: 30px;
+      padding: 5px;
+      font-size: 12px;
+  }
+  
+  .team-container-button-edit-tablet {
+      width: 62px;
+      height: 29px;
+      background-color: #525566;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+      margin: 2px 8px 18px 8px;
+  }
+  
+  .team-container-button-edit-tablet:hover {
+      background-color: #C7CBDC;
+  }
+  
+  .team-container-button-delete-tablet {
+      width: 62px;
+      height: 29px;
+      background-color: #FF4553;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+      margin: 2px 8px 18px 8px;
+  }
+  
+  .team-container-button-delete-tablet:hover {
+      background-color: rgba(255, 69, 85, 0.47);
+  }
+  
+  
+  .team-container-name-title-tablet {
+      width: 100px;
+      height: 20px;
+      font-weight: 600;
+  }
+  
+  .team-container-button-edit-title-tablet {
+      width: 59px;
+      height: 25px;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+  }
+  
+  .team-container-button-delete-title-tablet {
+      width: 59px;
+      height: 25px;
+      border-radius: 4px;
+      color: #FFFFFF;
+      border: none;
+  }
+  
+  .teams-title-h1-tablet {
+      font-family: 'Roboto', sans-serif;
+      color: rgb(103, 106, 122);
+      font-size: 28px;
+      margin: auto;
+      padding-bottom: 15px;
+      padding-top: 25px;
+  }
+  
+  .team-container-button-new-tablet {
+      height: 25px;
+      width: 67px;
+      border-radius: 5px;
+      background-color: #525566;
+      color: #FFFFFF;
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .5px;
+  }
+  
+  .team-container-button-new-tablet:hover {
+      background-color: #C7CBDC;
+  }
+  
+  .team-container-button-new-1-tablet {
+      height: 25px;
+      width: 67px;
+      border: none;
+      background: none;
+      padding-right: 67px;
+      padding-left: 66px;
+  }
+
+  .hr-tablet-aaa {
+    border: solid .1px;
+    border-color: rgba(104, 104, 104, 0.753) !important;
+    width: 260px;
+    border-radius: 24px;
+  }

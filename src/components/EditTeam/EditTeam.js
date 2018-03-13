@@ -4,6 +4,10 @@ import './EditTeam.css';
 import Nav from './../Nav/Nav.js';
 import Header from './../Header/Header.js';
 import { ToastContainer, toast } from 'react-toastify';
+import Responsive from 'react-responsive';
+
+const Desktop = props => <Responsive {...props} minWidth={1025} />;
+const Tablet = props => <Responsive {...props} minWidth={1} maxWidth={1024} />;
 
 
 class EditTeam extends Component {
@@ -59,6 +63,8 @@ class EditTeam extends Component {
 
     render() {
         return (
+            <div>
+                <Desktop>
             <div className='edit-team-page'>
                 <ToastContainer autoClose={2500} />
                 <div>
@@ -100,6 +106,58 @@ class EditTeam extends Component {
 
                 </form>
 
+            </div>
+            </Desktop>
+
+
+            <Tablet>
+
+                    <div className='edit-team-page-tablet'>
+                <ToastContainer autoClose={2500} />
+                
+
+                <div>
+                    <Header />
+                </div>
+
+                <form className='edit-team-box-tablet'>
+
+                    <div><h2 className='edit-your-team-tablet' >Edit Your Team</h2></div>
+
+                    <h4 className='edit-team-h4-tablet'>Team Name</h4>
+                    <input value={this.state.team_name} className='creat-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  This can be changed anytime' name='team_name' type='text' />
+                    <h4 className='edit-team-h4-tablet'>Sport</h4>
+                    <input value={this.state.sport} className='creat-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  Sport' name='sport' type='text' />
+                    <h4 className='edit-team-h4-tablet'>Time Zone</h4>
+                    <select value={this.state.time_zone} className='creat-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  This helps with scheduling and such' name='time_zone' type='text'>
+                        <option value=''></option>
+                        <option value='Hawaii'>Hawaii</option>
+                        <option value='Alaskan'>Alaskan</option>
+                        <option value='Pacific'>Pacific</option>
+                        <option value='Mountain'>Mountain</option>
+                        <option value='Mountain (Arizona)'>Mountain (Arizona)</option>
+                        <option value='Central'>Central</option>
+                        <option value='Eastern'>Eastern</option>
+                    </select>
+                    <h4 className='edit-team-h4-tablet'>Country</h4>
+                    <input value={this.state.country} className='creat-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  Country' name='country' type='text' />
+                    <h4 className='edit-team-h4-tablet'>Zip/Postal</h4>
+                    <input value={this.state.zip_code} className='creat-input-tablet' onChange={e => this.handleOnChange(e)} placeholder='  Zip' name='zip_code' type='text' />
+                    {/* <h4 className='edit-team-h4'>Logo</h4>
+                    <input onChange={e => this.handleOnChange(e)} placeholder='  Logo' name='logo' type='text' src='submit.gif' /> */}
+                    <button className='edit-team-cancel-button-tablet' type='reset' value='Cancel'>Clear</button>
+                    <button className='edit-team-submit-button-tablet' onClick={ e => this.saveChanges(e)}>Save Team Info</button>
+
+
+                </form>
+
+                <div>
+                    <Nav />
+                </div>
+
+            </div>
+
+            </Tablet>
             </div>
         )
     }
